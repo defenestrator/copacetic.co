@@ -92,7 +92,7 @@
 
                 <div class="links">
                     <p>
-                        Blissful Software Delivery Help
+                        Blissful Software Help
                     </p>
                 </div>
             </div>
