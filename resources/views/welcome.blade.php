@@ -58,7 +58,7 @@
                 transition: all 3s;
             }
             .title {
-                font-size: 84px;
+                font-size: 3em;
                 color:#c493a6;
                 padding: 0 1em;
             }
