@@ -75,15 +75,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <img src="/images/copacetic.co-logo-web.png" title="Copacetic - Blissful Software Delivery Consulting" alt="Copacetic - Blissful Software Delivery Consulting">
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://github.com/defenestrator/copacetic.co">Source Repository</a>
                 </div>
             </div>
         </div>
