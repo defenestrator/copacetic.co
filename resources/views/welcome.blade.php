@@ -14,9 +14,9 @@
         <style>
             html, body {
                 background-color:#fffaf0;
-                color: #636b6f;
+                color: #8c8c8c;
                 font-family: 'Raleway', sans-serif;
-                font-weight: 200;
+                font-weight: 600;
                 height: 100vh;
                 margin: 0;
             }
@@ -30,11 +30,11 @@
                 display: flex;
                 justify-content: center;
                 background-color:#fffaf0;
-                transition: background 2s;
+                transition: background 3s;
             }
             .flex-center:hover, .flex-center:focus{
-                background-color: #d6ddff;
-                transition: background 2s;
+                background-color: #f2e5ff;
+                transition: background 3s;
             }
             .position-ref {
                 position: relative;
@@ -50,12 +50,12 @@
                 text-align: center;
                 background-color:#fffaf0;
                 border-radius:2em;
-                transition: all 2s;
+                transition: all 3s;
             }
             .content:hover, .content:focus {
                 background-color:#ffffff;
                 border-radius:8em;
-                transition: all 2s;
+                transition: all 3s;
             }
             .title {
                 font-size: 84px;
