@@ -8,7 +8,7 @@
         <title>Copacetic, friend.</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
         <style>
@@ -16,7 +16,7 @@
                 background-color: #fff;
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
-                font-weight: 100;
+                font-weight: 200;
                 height: 100vh;
                 margin: 0;
             }
@@ -38,7 +38,7 @@
             .top-right {
                 position: absolute;
                 right: 10px;
-                top: 18px;
+                top: 25px;
             }
 
             .content {
@@ -50,12 +50,13 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: #8c8c8c;
                 padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
                 text-decoration: none;
+                font-size: 1.1em;
+                letter-spacing: .124em;
+                margin: 2.0em 1.1em 0 0 ;
+                padding: 0;
                 text-transform: uppercase;
             }
 
@@ -79,7 +80,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://github.com/defenestrator/copacetic.co">Source Repository</a>
+                    <a href="https://github.com/defenestrator/copacetic.co">Source</a>
 
                 </div>
             </div>
