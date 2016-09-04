@@ -59,6 +59,7 @@
             }
             .title {
                 font-size: 3em;
+                font-weight:200;
                 color:#c493a6;
                 padding: 1rem;
             }
