@@ -75,7 +75,7 @@
             }
 
             .m-b-md {
-                margin-bottom: 2rem;
+                margin: 2rem 0;
             }
         </style>
     </head>
