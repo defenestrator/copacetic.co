@@ -59,6 +59,8 @@
             }
             .title {
                 font-size: 84px;
+                color:#c493a6;
+                padding: 0 1em;
             }
 
             .links > a {
@@ -68,7 +70,7 @@
                 font-size: 1.1em;
                 letter-spacing: .124em;
                 margin: 2.0em 1.1em 0 0 ;
-                padding: 0;
+                padding: 1rem;
                 text-transform: uppercase;
             }
 
@@ -84,7 +86,8 @@
             </div>
             <div class="content">
                 <div class="title m-b-md">
-                    <img src="/images/copacetic.co-logo-web.png" title="Copacetic - Blissful Software Delivery Consulting" alt="Copacetic - Blissful Software Delivery Consulting">
+                    <img src="/images/copacetic.co-face.png" title="Copacetic - Blissful Software Delivery Consulting" alt="Copacetic - Blissful Software Delivery Consulting">
+                    <p>copacetic.co</p>
                 </div>
 
                 <div class="links">
