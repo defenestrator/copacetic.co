@@ -88,6 +88,9 @@
                 </div>
 
                 <div class="links">
+                    <p>
+                        Blissful Software Delivery Help
+                    </p>
                 </div>
             </div>
         </div>
