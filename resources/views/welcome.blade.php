@@ -51,13 +51,13 @@
             .content {
                 text-align: center;
                 background-color:#fffaf0;
-                border-radius:2em;
+                border-radius:2rem;
                 transition: all 3s;
                 -webkit-transition: all 3s;
             }
             .content:hover, .content:focus {
                 background-color:#ffffff;
-                border-radius:8em;
+                border-radius:5rem;
                 transition: all 3s;
                 -webkit-transition: all 3s;
             }
