@@ -13,7 +13,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-color:#fffaf0;
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 200;
@@ -29,8 +29,13 @@
                 align-items: center;
                 display: flex;
                 justify-content: center;
+                background-color:#fffaf0;
+                transition: background 2s;
             }
-
+            .flex-center:hover, .flex-center:focus{
+                background-color: #d6ddff;
+                transition: background 2s;
+            }
             .position-ref {
                 position: relative;
             }
@@ -43,8 +48,15 @@
 
             .content {
                 text-align: center;
+                background-color:#fffaf0;
+                border-radius:2em;
+                transition: all 2s;
             }
-
+            .content:hover, .content:focus {
+                background-color:#ffffff;
+                border-radius:8em;
+                transition: all 2s;
+            }
             .title {
                 font-size: 84px;
             }
