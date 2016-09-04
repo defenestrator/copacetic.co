@@ -1,6 +1,4 @@
-const elixir = require('laravel-elixir');
-
-require('laravel-elixir-vue');
+var elixir = require('laravel-elixir');
 
 /*
  |--------------------------------------------------------------------------
@@ -13,7 +11,14 @@ require('laravel-elixir-vue');
  |
  */
 
-elixir(mix => {
-    mix.sass('app.scss')
-       .webpack('app.js');
+elixir(function(mix) {
+    mix.copy('semantic/dist/semantic.min.css', 'public/css/semantic.min.css');
+    mix.sass('app.scss');
+});
+
+elixir(function(mix) {
+    mix.copy('semantic/dist/semantic.min.js', 'public/js/semantic.min.js');
+    mix.scripts([
+        'app.js'
+    ]);
 });

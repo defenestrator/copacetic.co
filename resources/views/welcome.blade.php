@@ -81,10 +81,8 @@
         <div class="flex-center position-ref full-height">
             <div class="top-right links">
             <a href="http://blog.copacetic.co">Blog</a>
-            @if (Route::has('login'))
                     <a href="{{ url('/login') }}">Login</a>
                     <a href="{{ url('/register') }}">Register</a>
-            @endif
             </div>
             <div class="content">
                 <div class="title m-b-md">

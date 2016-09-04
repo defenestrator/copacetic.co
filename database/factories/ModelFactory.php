@@ -11,7 +11,7 @@
 |
 */
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(App\Repositories\User\User::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
@@ -19,5 +19,40 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'email' => $faker->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10),
+    ];
+});
+
+/*
+|--------------------------------------------------------------------------
+| UserMeta Factory
+|--------------------------------------------------------------------------
+*/
+
+$factory->define(App\Repositories\UserMeta\UserMeta::class, function (Faker\Generator $faker) {
+    return [
+        'user_id' => 1,
+        'phone' => $faker->phoneNumber,
+        'marketing' => 1,
+        'terms_and_cond' => 1,
+    ];
+});
+
+$factory->define(App\Repositories\Role\Role::class, function (Faker\Generator $faker) {
+    return [
+        'name' => 'member',
+        'label' => 'Member',
+    ];
+});
+
+/*
+|--------------------------------------------------------------------------
+| Team Factory
+|--------------------------------------------------------------------------
+*/
+
+$factory->define(App\Repositories\Team\Team::class, function (Faker\Generator $faker) {
+    return [
+        'user_id' => 1,
+        'name' => $faker->name
     ];
 });
