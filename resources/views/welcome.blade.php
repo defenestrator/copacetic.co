@@ -60,22 +60,22 @@
             .title {
                 font-size: 3em;
                 color:#c493a6;
-                padding: 0 1em;
+                padding: 1rem;
             }
 
             .links > a {
                 color: #8c8c8c;
                 padding: 0 25px;
                 text-decoration: none;
-                font-size: 1.1em;
+                font-size: 1.1rem;
                 letter-spacing: .124em;
-                margin: 2.0em 1.1em 0 0 ;
+                margin: 2.0rem 1.1rem 0 0 ;
                 padding: 1rem;
                 text-transform: uppercase;
             }
 
             .m-b-md {
-                margin-bottom: 30px;
+                margin-bottom: 2rem;
             }
         </style>
     </head>
