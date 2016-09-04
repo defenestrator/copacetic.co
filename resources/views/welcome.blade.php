@@ -31,10 +31,12 @@
                 justify-content: center;
                 background-color:#fffaf0;
                 transition: background 3s;
+                -webkit-transition: all 3s;
             }
             .flex-center:hover, .flex-center:focus{
                 background-color: #f2e5ff;
                 transition: background 3s;
+                -webkit-transition: all 3s;
             }
             .position-ref {
                 position: relative;
@@ -51,11 +53,13 @@
                 background-color:#fffaf0;
                 border-radius:2em;
                 transition: all 3s;
+                -webkit-transition: all 3s;
             }
             .content:hover, .content:focus {
                 background-color:#ffffff;
                 border-radius:8em;
                 transition: all 3s;
+                -webkit-transition: all 3s;
             }
             .title {
                 font-size: 3em;
