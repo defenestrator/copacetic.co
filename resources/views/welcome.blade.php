@@ -66,20 +66,19 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
+            <div class="top-right links">
+            <a href="http://blog.copacetic.co">Blog</a>
             @if (Route::has('login'))
-                <div class="top-right links">
                     <a href="{{ url('/login') }}">Login</a>
                     <a href="{{ url('/register') }}">Register</a>
-                </div>
             @endif
-
+            </div>
             <div class="content">
                 <div class="title m-b-md">
                     <img src="/images/copacetic.co-logo-web.png" title="Copacetic - Blissful Software Delivery Consulting" alt="Copacetic - Blissful Software Delivery Consulting">
                 </div>
 
                 <div class="links">
-                    <a href="http://blog.copacetic.co">Blog</a>
                     <a href="https://github.com/defenestrator/copacetic.co">Source Repository</a>
 
                 </div>
