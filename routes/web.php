@@ -41,8 +41,8 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 | Registration
 |--------------------------------------------------------------------------
 */
-//Route::get('register', 'Auth\RegisterController@showRegistrationForm');
-//Route::post('register', 'Auth\RegisterController@register');
+Route::get('register', 'Auth\RegisterController@showRegistrationForm');
+Route::post('register', 'Auth\RegisterController@register');
 
 /*
 |--------------------------------------------------------------------------
