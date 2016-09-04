@@ -1,7 +1,6 @@
 html, body {
     margin: 0;
     padding: 0;
-    min-height: calc(100% - 62px);
 }
 
 /*
@@ -12,17 +11,9 @@ html, body {
 
 .app-wrapper {
     width: 100%;
-    min-height: calc(100% - 62px);
+    min-height: 100%;
     overflow: hidden;
     padding: 0px !important;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row;
-    flex-direction: row;
-    -webkit-justify-content: flex-start;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    margin-top: 62px;
 }
 
 /*
@@ -31,10 +22,11 @@ html, body {
 |--------------------------------------------------------------------------
 */
 .alert {
-    position: fixed!important;
-    bottom: 24px;
-    left: 24px;
-    z-index: 1000;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 24px;
+    z-index: 10000;
 }
 
 /*
@@ -44,10 +36,7 @@ html, body {
 */
 
 .main {
-    display: flex;
-    padding: 24px;
-    width: calc(100% - 280px);
-    margin-left: 280px;
+    margin-bottom: 48px;
 }
 
 @media (min-width: 768px) {
@@ -55,6 +44,10 @@ html, body {
         padding-right: 20px;
         padding-left: 20px;
     }
+}
+
+.main .page-header {
+    margin-top: 0;
 }
 
 .index-table {
@@ -71,18 +64,14 @@ html, body {
 */
 
 .footer {
-    bottom: 0;
-    left: 0;
     width: 100%;
     height: 50px;
     background-color: #222;
     color: #FFF;
-    z-index: 100;
-    position: fixed;
 }
 
 .footer p {
-    line-height: 44px;
+    line-height: 50px;
     margin: 0 0 0 24px;
     padding: 0;
 }

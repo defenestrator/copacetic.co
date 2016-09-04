@@ -14,7 +14,6 @@
 
         <!-- Local -->
         <link rel="stylesheet" type="text/css" href="/css/raw.min.css">
-        <link rel="stylesheet" type="text/css" href="/css/semantic.min.css">
         <link rel="stylesheet" type="text/css" href="/css/app.css">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -30,20 +29,27 @@
 
         @include("layouts.navigation")
 
-        <div class="app-wrapper">
+        <div class="app-wrapper container-fluid raw-margin-top-50">
             @yield("app-content")
-            @include('partials.message')
         </div>
 
-        <div class="fluid container">
-            @include('partials.errors')
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    @include('partials.errors')
+                    @include('partials.message')
+                </div>
+            </div>
         </div>
 
-        <div class="footer">
-            @if (Session::get('original_user'))
-                <a class="mini ui button violet right floated" href="/users/switch-back">Return to your Login</a>
-            @endif
-            <p>&copy; {!! date('Y'); !!} <a href="">You</a></p>
+        <div class="pull-left raw100 navbar navbar-fixed-bottom">
+            <div class="pull-left footer">
+                <p class="raw-margin-left-20">&copy; {!! date('Y'); !!} <a href="">You</a>
+                    @if (Session::get('original_user'))
+                        <a class="btn btn-default pull-right btn-xs" href="/users/switch-back">Return to your Login</a>
+                    @endif
+                </p>
+            </div>
         </div>
 
         <script type="text/javascript">
@@ -52,7 +58,6 @@
         </script>
         @yield("pre-javascript")
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script src="{{ asset('js/semantic.min.js') }}"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
         <script src="/js/all.js"></script>
         @yield("javascript")

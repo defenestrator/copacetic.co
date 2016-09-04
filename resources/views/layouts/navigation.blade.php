@@ -1,19 +1,21 @@
-<div class="ui fixed inverted menu">
-    <div class="header item">
-        <img title="Copacetic Consulting" alt="Blissful Software Delivery" src="/images/copacetic-face.png">
-    </div>
-    <div class="header item">
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
+            <span class="sr-only">Copacetic</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <span class="navbar-brand"><span class="fa"><img src="/images/copacetic-face.png"></span>Copacetic</span>
         @if (Auth::user())
-            <p>Signed in as {{ Auth::user()->name }}</p>
+            <p class="navbar-text navbar-left">Signed in as {{ Auth::user()->name }}</p>
         @endif
     </div>
-    <div class="ui simple dropdown item right">
-        Copacetic <i class="dropdown icon"></i>
-        <div class="menu">
-            <a class="item" href="{{ url('dashboard') }}">Dashboard</a>
-        </div>
+    <div class="collapse navbar-collapse navbar-right" id="mainNavbar">
+        <ul class="nav navbar-nav">
+            @if (Auth::user())
+                <li><a class="raw-margin-right-24" href="/logout">Logout</a></li>
+            @endif
+        </ul>
     </div>
-    @if (Auth::user())
-        <a class="item" href="/logout">Logout</a>
-    @endif
 </div>

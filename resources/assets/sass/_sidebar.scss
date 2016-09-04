@@ -1,10 +1,10 @@
 .sidebar {
-    display: flex;
+    display: block;
     position: fixed !important;
-    z-index: 10;
+    z-index: 1000;
     bottom: 0;
-    top: 44px;
-    width: 280px;
+    top: 45px;
+    width: 300px;
     padding: 0px;
     padding-top: 24px;
     background-color: #DDD;
@@ -12,6 +12,12 @@
     overflow-x: hidden;
     height: 100%;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+.sidebar-header {
+    padding: 16px 0;
+    text-align: center;
+    background-color: #EEE;
 }
 
 /*
@@ -22,18 +28,14 @@
 
 @media (min-width: 768px) {
     .sidebar {
-        width: 280px;
-        min-width: 280px;
+        width: 16.66666667%;
+        min-width: 200px;
     }
 }
 @media (max-width: 768px) {
     .sidebar {
-        left: -280px;
+        left: -300px;
     }
-}
-
-.nav {
-    width: 290px!important;
 }
 
 .nav-sidebar > li > a {

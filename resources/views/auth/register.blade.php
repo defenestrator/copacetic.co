@@ -2,39 +2,37 @@
 
 @section('app-content')
 
-<div class="ui fluid container">
-    <div class="ui three column grid">
-        <div class="column centered">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
 
-            <h1>Register</h1>
+            <h1 class="text-center">Register</h1>
 
-            <form class="ui form" method="POST" action="/register">
+            <form method="POST" action="/register">
                 {!! csrf_field() !!}
 
-                <div class="field">
+                <div class="col-md-12 raw-margin-top-24">
                     <label>Name</label>
-                    <input type="text" name="name" placeholder="Name" value="{{ old('name') }}">
+                    <input class="form-control" type="text" name="name" value="{{ old('name') }}">
                 </div>
-                <div class="field">
+                <div class="col-md-12 raw-margin-top-24">
                     <label>Email</label>
-                    <input type="email" name="email" placeholder="Email Address" value="{{ old('email') }}">
+                    <input class="form-control" type="email" name="email" value="{{ old('email') }}">
                 </div>
-                <div class="field">
+                <div class="col-md-12 raw-margin-top-24">
                     <label>Password</label>
-                    <input type="password"  placeholder="Password" name="password">
+                    <input class="form-control" type="password" name="password">
                 </div>
-                <div class="field">
+                <div class="col-md-12 raw-margin-top-24">
                     <label>Confirm Password</label>
-                    <input type="password"  placeholder="Confirm Password" name="password_confirmation">
+                    <input class="form-control" type="password" name="password_confirmation">
                 </div>
-                <div class="field">
-                    <a class="ui violet button left" href="/login">Login</a>
-                    <button class="ui primary button right floated" type="submit">Register</button>
+                <div class="col-md-12 raw-margin-top-24">
+                    <a class="btn btn-default pull-left" href="/login">Login</a>
+                    <button class="btn btn-primary pull-right" type="submit">Register</button>
                 </div>
             </form>
 
         </div>
     </div>
-</div>
 
 @stop

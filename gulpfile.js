@@ -12,12 +12,10 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.copy('semantic/dist/semantic.min.css', 'public/css/semantic.min.css');
     mix.sass('app.scss');
 });
 
 elixir(function(mix) {
-    mix.copy('semantic/dist/semantic.min.js', 'public/js/semantic.min.js');
     mix.scripts([
         'app.js'
     ]);

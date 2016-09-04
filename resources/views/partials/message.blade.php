@@ -1,6 +1,6 @@
 @if (Session::has('message') && ! is_array(Session::get('message')))
-    <div class="ui info floating message alert">
+    <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <span> {{ Session::get('message') }} </span>
-        <i class="fa fa-close"></i>
     </div>
 @endif
