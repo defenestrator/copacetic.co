@@ -15,7 +15,7 @@
         }
         .is-light {
             background-color:#fffaf0;
-            background-image: linear-gradient(rgba(255,250,240, 0.8),rgba(242,229,255, 0.8)),linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6));
+            background-image: linear-gradient(rgb(255,250,240),rgb(242,229,255)),linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6));
         }
         .nav {
             padding: 20px 0;
