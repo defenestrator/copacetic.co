@@ -43,6 +43,9 @@
             border-color:#84616b;
             color: #84616b;
         }
+        .nav > .container > .nav-left > .nav-item:first-child:not(.is-tab) {
+            padding-left:1rem;
+        }
         .promo-img {
             border-radius: 10px;
         }
