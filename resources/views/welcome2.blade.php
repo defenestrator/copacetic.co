@@ -15,7 +15,7 @@
         }
         .is-light {
             background-color:#fffaf0;
-            background-image: linear-gradient(rgba(255,250,240, 0.8),rgba(242,229,255, 0.8)),linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1440439307159-c3afc8a8e4ff?dpr=1&auto=format&crop=entropy&fit=crop&w=2000&h=1000&q=40');
+            background-image: linear-gradient(rgba(255,250,240, 0.8),rgba(242,229,255, 0.8)),linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6));
         }
         .nav {
             padding: 20px 0;
@@ -59,7 +59,7 @@
             <nav class="nav">
                 <div class="container">
                     <div class="nav-left">
-                        <a class="nav-item" href="../index.html">
+                        <a class="nav-item" href="/">
                             Copacetic Consulting
                         </a>
                     </div>
