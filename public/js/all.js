@@ -1,8 +1,1 @@
-$(function(){
-
-    $('.alert').delay(7000).fadeOut();
-
-});
-
-
-//# sourceMappingURL=all.js.map
+$(function(){$(".alert").delay(7e3).fadeOut()});

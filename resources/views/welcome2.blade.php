@@ -11,7 +11,7 @@
     <style>
         body {
             font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-            min-width:420px;
+            min-width:300px;
         }
         .is-light {
             background-color:#fffaf0;
@@ -45,7 +45,6 @@
         }
         .promo-img {
             border-radius: 10px;
-            border: 10px solid #fff;
         }
         .button.is-danger.is-outlined {
             border-color:#87616b;
@@ -110,8 +109,8 @@
                     </h2>
                     <br>
                     <p class="control has-addons has-text-centered">
-                        <input class="input is-expanded is-large" type="text" placeholder="Get some love.">
-                        <a class="button is-large is-danger is-outlined">
+                        <input class="input is-expanded" type="text" placeholder="Get some love.">
+                        <a class="button is-danger is-outlined">
                             Sign Up
                         </a>
                     </p>
@@ -124,9 +123,7 @@
         <div class="container">
             <div class="tabs is-centered">
                 <ul>
-                    <li><a href="http://bulma.io">Made with bulma</a></li>
-                    <li><a>Copyright 2016 Bulma</a></li>
-                    <li><a href="http://unsplash.com">Images via unsplash</a></li>
+                    <li><a>&copy; Copacetic Media {{ \Carbon\Carbon::now('PDT') }}</a></li>
                 </ul>
             </div>
         </div>
