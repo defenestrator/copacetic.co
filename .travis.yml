@@ -8,12 +8,10 @@ before_script:
   - phpenv config-rm xdebug.ini
   - cp .env.travis .env
 script:
-  - touch storage/acceptance/acceptance.sqlite
-  - mkdir storage/uploads
-  - chmod -R 777 storage bootstrap/cache
+  - mkdir storage/uploads storage/test
+  - touch storage/test/acceptance.sqlite
   - composer self-update
   - composer install --prefer-source
   - php artisan key:generate
   - php artisan migrate --seed
-  - cp storage/acceptance/acceptance.sqlite storage/integration/integration.sqlite
   - vendor/bin/phpunit
