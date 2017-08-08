@@ -1,1 +1,0 @@
-$(function(){$(".alert").delay(7e3).fadeOut()});
