@@ -4,7 +4,6 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        {{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">--}}
 
         <title>Feel Good Software Delivery</title>
 
@@ -24,7 +23,8 @@
 
             .full-height {
                 height: 100vh;
-                background: linear-gradient(rgb(255,250,240),rgb(242,229,255)),linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6));
+                background: linear-gradient(rgb(255,250,240),rgb(242,229,255)),
+                            linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6));
             }
 
             .flex-center {
@@ -68,6 +68,11 @@
                 border-radius: 4px;
             }
             .btn-primary {
+                background-color: #cd9aae;
+                border-color: #87616b;
+                color:white;
+            }
+            .btn-nav, .btn-why {
                 background-color: transparent;
                 border-color: #87616b;
             }
@@ -93,7 +98,9 @@
             .footer { font-size: 0.67rem; padding-top: .5rem; }
             .email { width:240px; border-radius: .5em; }
             .address { line-height: 1.5rem;}
-            .alert{ padding: .1em; background: #f9f9c0; border-radius:0.5rem;}
+            .alert, .converse { padding:.2rem .5rem; }
+            .alert{ background: #f9f9c0; border: 1px solid #ffff00; border-radius:0.5rem;}
+
             .message { }
         </style>
     </head>
@@ -124,16 +131,15 @@
                     <a href="recovery">Help</a>
                 </div>
 
-                <div class="alerts">
-
-                    @if ($errors)
-                        <ul>
-                            @foreach($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    @endif
+                @if ($errors)
+                <div class="errors">
+                    <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
                 </div>
+                @endif
 
                 <div class="email-capture">
                     @if (session('success'))
@@ -141,22 +147,26 @@
                             {{ session('success') }}
                         </div>
                     @else
-                    <div>Start a conversation.</div>
+                    <div class="converse">Start a conversation.</div>
                     @endif
-                <form method="POST" action="{{ route('landing-page-email') }}">
-                    {{ csrf_field() }}
-                    <div class="form-group">
-                        <input name="email-address" class="input email address" type="text" placeholder="your email">
-                    </div>
-                    <div class="form-group">
-                        <textarea name="email-message" class="input email message" cols="40" rows="10" placeholder="How can we help?"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary">
-                            Hi!
-                        </button>
-                    </div>
-                </form>
+                    <form method="POST" action="{{ route('landing-page-email') }}">
+                        {{ csrf_field() }}
+                        <div class="form-group">
+                            <input name="email-address"
+                                   class="input email address"
+                                   type="text"
+                                   placeholder="your email"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <textarea name="email-message" class="input email message" cols="40" rows="10" placeholder="message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                               SEND
+                            </button>
+                        </div>
+                    </form>
                 </div>
                 <hr>
                 <div class="links">
