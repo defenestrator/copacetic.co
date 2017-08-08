@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        {{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">--}}
 
         <title>Feel Good Software Delivery</title>
 
@@ -45,28 +46,55 @@
             .content {
                 text-align: center;
             }
-
-            .title {
-                font-size: 84px;
+            .btn {
+                display: inline-block;
+                padding: 6px 12px;
+                margin-bottom: 0;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.42857143;
+                text-align: center;
+                white-space: nowrap;
+                vertical-align: middle;
+                -ms-touch-action: manipulation;
+                touch-action: manipulation;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                background-image: none;
+                border: 1px solid transparent;
+                border-radius: 4px;
             }
-
+            .btn-primary {
+                background-color: transparent;
+                border-color: #87616b;
+            }
             .links > a {
                 color: #636b6f;
-                padding: 0 25px;
+                padding: 0 1em;
                 font-size: 12px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+                line-height:1.8rem;
             }
 
             .m-b-md {
-                margin-bottom: 30px;
             }
 
             .promo-img {
-                border-radius: 10px;
+                opacity: .45;
             }
+
+            .form-group { padding-top:.4em; }
+            .footer { font-size: 0.67rem; padding-top: .5rem; }
+            .email { width:240px; border-radius: .5em; }
+            .address { line-height: 1.5rem;}
+            .alert{ padding: .1em; background: #f9f9c0; border-radius:0.5rem;}
+            .message { }
         </style>
     </head>
     <body>
@@ -83,33 +111,59 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Copacetic
-                </div>
-
+                <img src="/images/copacetic.co-logo-web.png"
+                     class="promo-img"
+                     title="Copacetic - Blissful Software Delivery Consulting"
+                     alt="Copacetic - Blissful Software Delivery Consulting"
+                />
                 <div class="links">
-
                     <a href="development">Make</a>
                     <a href="operations">Deliver</a>
                     <a href="analysis">Learn</a>
                     <a href="maintenance">Change</a>
                     <a href="recovery">Help</a>
                 </div>
-                <img src="/images/copacetic.co-face.png"
-                     class="promo-img"
-                     title="Copacetic - Blissful Software Delivery Consulting"
-                     alt="Copacetic - Blissful Software Delivery Consulting"
-                />
-                <p class="email-capture">
-                    <div>Enter your email to start a conversation.</div>
-                    <input class="input" type="text" placeholder="We can help.">
-                    <button class="btn btn-primary">
-                        Howdy!
-                    </button>
 
-                </p>
+                <div class="alerts">
+
+                    @if ($errors)
+                        <ul>
+                            @foreach($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    @endif
+                </div>
+
+                <div class="email-capture">
+                    @if (session('success'))
+                        <div class="alert">
+                            {{ session('success') }}
+                        </div>
+                    @else
+                    <div>Start a conversation.</div>
+                    @endif
+                <form method="POST" action="{{ route('landing-page-email') }}">
+                    {{ csrf_field() }}
+                    <div class="form-group">
+                        <input name="email-address" class="input email address" type="text" placeholder="your email">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="email-message" class="input email message" cols="40" rows="10" placeholder="How can we help?"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">
+                            Hi!
+                        </button>
+                    </div>
+                </form>
+                </div>
+                <hr>
                 <div class="links">
                     <a href="culture">Why?</a>
+                </div>
+                <div class="footer">
+                    <a>&copy; Copacetic Media {{ \Carbon\Carbon::now('PDT') }}</a>
                 </div>
             </div>
         </div>
