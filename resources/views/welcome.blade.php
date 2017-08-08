@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Feel Good Software Delivery</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -23,6 +23,7 @@
 
             .full-height {
                 height: 100vh;
+                background: linear-gradient(rgb(255,250,240),rgb(242,229,255)),linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6));
             }
 
             .flex-center {
@@ -62,6 +63,10 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .promo-img {
+                border-radius: 10px;
+            }
         </style>
     </head>
     <body>
@@ -79,15 +84,32 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Copacetic
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+
+                    <a href="development">Make</a>
+                    <a href="operations">Deliver</a>
+                    <a href="analysis">Learn</a>
+                    <a href="maintenance">Change</a>
+                    <a href="recovery">Help</a>
+                </div>
+                <img src="/images/copacetic.co-face.png"
+                     class="promo-img"
+                     title="Copacetic - Blissful Software Delivery Consulting"
+                     alt="Copacetic - Blissful Software Delivery Consulting"
+                />
+                <p class="email-capture">
+                    <div>Enter your email to start a conversation.</div>
+                    <input class="input" type="text" placeholder="We can help.">
+                    <button class="btn btn-primary">
+                        Howdy!
+                    </button>
+
+                </p>
+                <div class="links">
+                    <a href="culture">Why?</a>
                 </div>
             </div>
         </div>
