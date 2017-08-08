@@ -169,11 +169,10 @@
                     </form>
                 </div>
                 <hr>
-                <div class="links">
-                    <a href="culture">Why?</a>
-                </div>
+
                 <div class="footer">
-                    <a>&copy; Copacetic Media {{ \Carbon\Carbon::now('PDT') }}</a>
+                    <p>&copy; Copacetic Media </p>
+                    <p>{{ \Carbon\Carbon::now('America/Denver') }}</p>
                 </div>
             </div>
         </div>
