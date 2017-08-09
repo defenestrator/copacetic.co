@@ -35,14 +35,10 @@
                 position: relative;
             }
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
             .content {
                 text-align: center;
+                position: absolute;
+                top:0;
             }
             .btn {
                 display: inline-block;
