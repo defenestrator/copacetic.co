@@ -23,6 +23,7 @@
             .full-height {
                 background: linear-gradient(rgb(255,250,240),rgb(242,229,255));
                 height: 100vh;
+                width:100%;
             }
 
             .flex-center {
