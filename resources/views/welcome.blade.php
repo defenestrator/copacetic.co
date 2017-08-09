@@ -38,7 +38,7 @@
             .content {
                 text-align: center;
                 position: absolute;
-                top:0;
+                top:20px;
             }
             .btn {
                 display: inline-block;
