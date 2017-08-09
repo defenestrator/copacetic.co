@@ -6,8 +6,6 @@ use App\Contact;
 use Illuminate\Http\Request;
 use App\Mail\LandingPageContact;
 use Illuminate\Support\Facades\Mail;
-use App\Http\Controllers\Controller;
-use ReCaptcha\ReCaptcha;
 
 class LandingPageController extends Controller
 {
