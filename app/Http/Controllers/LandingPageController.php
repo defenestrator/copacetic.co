@@ -27,9 +27,9 @@ class LandingPageController extends Controller
             'address' => $request->email,
             'message' => $request->message,
         ]);
-
+        $contact = Contact::all()->last();
         // send email to mailgun, which will distribute to administrators
-        Mail::to('landingpage@mg.copacetic.co')->send(new LandingPageContact());
-        return \Redirect::route('welcome')->with('success', 'Thanks for writing, we will respond as soon as possible.' );
+        Mail::to('landingpage@mg.copacetic.co')->send(new LandingPageContact($contact));
+        return \Redirect::route('welcome')->with('success', 'Thanks for writing! Expect a rapid response' );
     }
 }

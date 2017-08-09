@@ -2,32 +2,40 @@
 
 namespace App\Mail;
 
+use App\Contact;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
+
 
 class LandingPageContact extends Mailable
 {
     use Queueable, SerializesModels;
 
     /**
-     * Create a new message instance.
-     *
-     * @return void
+     * @var Contact
      */
-    public function __construct()
+    protected $contact;
+
+    /**
+     * LandingPageContact constructor.
+     * @param Contact $contact
+     */
+    public function __construct(Contact $contact)
     {
-        //
+        $this->contact = $contact;
     }
 
     /**
-     * Build the message.
-     * @param array $contact
      * @return $this
      */
     public function build()
     {
-        return $this->view('mail.landing-page');
+//        dd($this->contact);
+        return $this->view('mail.landing-page')
+            ->with([
+                'data' => $this->contact
+            ]);
     }
 }

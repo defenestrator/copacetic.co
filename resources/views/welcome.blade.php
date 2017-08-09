@@ -4,7 +4,6 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
         <title>Feel Good Software Delivery</title>
 
         <!-- Fonts -->
@@ -93,7 +92,7 @@
             .input { width: 304px; border-radius: 0.5em; line-height: 1.5rem;}
             .converse, .success, .errors {  padding:.2rem .2rem; border-radius:0.5rem;  }
             .errors{ background: #f9f9c0; border: 1px solid #ffff00; }
-            .message-list-item { font-size: 1.4rem; list-style-type: none; }
+            .message-list-item { text-align: left; list-style-type: none; }
             .success {background: #acf99f; border: 1px solid #2e5d2e; }
             .message { }
             .g-recaptcha {display: inline-block;}
