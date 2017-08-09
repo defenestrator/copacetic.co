@@ -19,12 +19,12 @@ class LandingPageController extends Controller
     {
 
          $this->validate($request, [
-            'address' => 'bail|required|email|min:6|max:255',
+            'email' => 'bail|required|email|min:6|max:255',
             'message' => 'required|min:8|max:640',
             'g-recaptcha-response' => 'recaptcha|required'
         ]);
         $contact->create([
-            'address' => $request->address,
+            'address' => $request->email,
             'message' => $request->message,
         ]);
 

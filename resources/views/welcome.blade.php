@@ -90,15 +90,13 @@
 
             .form-group { padding-top:.4em; }
             .footer { font-size: 0.67rem; padding-top: .5rem; }
-            .email { width:66.7%; border-radius: .5em; }
-            .address { line-height: 1.5rem;}
+            .input { width: 304px; border-radius: 0.5em; line-height: 1.5rem;}
             .converse, .success, .errors {  padding:.2rem .2rem; border-radius:0.5rem;  }
             .errors{ background: #f9f9c0; border: 1px solid #ffff00; }
             .message-list-item { font-size: 1.4rem; list-style-type: none; }
             .success {background: #acf99f; border: 1px solid #2e5d2e; }
             .message { }
             .g-recaptcha {display: inline-block;}
-            .recaptcha {display:block; height:84px;}
         </style>
         <script src="https://unpkg.com/vue"></script>
         <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -150,12 +148,10 @@
                     <div class="converse">Start a conversation.</div>
                 @endif
                 <div class="email-capture">
-
-
                     <form method="POST" action="{{ route('landing-page-email') }}">
                         {{ csrf_field() }}
                         <div class="form-group">
-                            <input name="address"
+                            <input name="email"
                                    class="input email address"
                                    type="text"
                                    placeholder="your email"
@@ -163,7 +159,7 @@
                             >
                         </div>
                         <div class="form-group">
-                            <textarea name="message" class="input email message" cols="80" rows="8" placeholder="message">{{ old('message') }}</textarea>
+                            <textarea name="message" class="input email message" rows="8" placeholder="message">{{ old('message') }}</textarea>
                         </div>
                         <div class="form-group recaptcha">
                             {!! Recaptcha::render() !!}
