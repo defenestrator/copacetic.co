@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
         <title>Feel Good Software Delivery</title>
 
         <!-- Fonts -->
@@ -72,10 +72,7 @@
                 border-color: #87616b;
                 color:white;
             }
-            .btn-nav, .btn-why {
-                background-color: transparent;
-                border-color: #87616b;
-            }
+
             .links > a {
                 color: #636b6f;
                 padding: 0 1em;
@@ -87,22 +84,24 @@
                 line-height:1.8rem;
             }
 
-            .m-b-md {
-            }
-
             .promo-img {
-                opacity: .45;
+                opacity: .5;
             }
 
             .form-group { padding-top:.4em; }
             .footer { font-size: 0.67rem; padding-top: .5rem; }
-            .email { width:240px; border-radius: .5em; }
+            .email { width:66.7%; border-radius: .5em; }
             .address { line-height: 1.5rem;}
-            .alert, .converse { padding:.2rem .5rem; }
-            .alert{ background: #f9f9c0; border: 1px solid #ffff00; border-radius:0.5rem;}
-
+            .converse, .success, .errors {  padding:.2rem .2rem; border-radius:0.5rem;  }
+            .errors{ background: #f9f9c0; border: 1px solid #ffff00; }
+            .message-list-item { font-size: 1.4rem; list-style-type: none; }
+            .success {background: #acf99f; border: 1px solid #2e5d2e; }
             .message { }
+            .g-recaptcha {display: inline-block;}
+            .recaptcha {display:block; height:84px;}
         </style>
+        <script src="https://unpkg.com/vue"></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -124,48 +123,59 @@
                      alt="Copacetic - Blissful Software Delivery Consulting"
                 />
                 <div class="links">
-                    <a href="development">Make</a>
-                    <a href="operations">Deliver</a>
-                    <a href="analysis">Learn</a>
-                    <a href="maintenance">Change</a>
-                    <a href="recovery">Help</a>
+                    <a href="#development">Make</a>
+                    <a href="#operations">Deliver</a>
+                    <a href="#analysis">Learn</a>
+                    <a href="#maintenance">Change</a>
+                    <a href="#recovery">Help</a>
                 </div>
 
-                @if ($errors)
-                <div class="errors">
-                    <ul>
+                @if ($errors->count() >= 1)
+                    <div class="errors">
                         @foreach($errors->all() as $error)
-                            <li>{{ $error }}</li>
+                            <ul>
+                                <li class="message-list-item">{{ $error }}</li>
+                            </ul>
                         @endforeach
-                    </ul>
-                </div>
-                @endif
-
-                <div class="email-capture">
-                    @if (session('success'))
-                        <div class="alert">
-                            {{ session('success') }}
-                        </div>
-                    @else
+                    </div>
+                @elseif (session('success'))
+                    <div class="success">
+                        <ul>
+                            <li class="message-list-item">
+                                {{ session('success') }}
+                            </li>
+                        </ul>
+                    </div>
+                @else
                     <div class="converse">Start a conversation.</div>
-                    @endif
+                @endif
+                <div class="email-capture">
+
+
                     <form method="POST" action="{{ route('landing-page-email') }}">
                         {{ csrf_field() }}
                         <div class="form-group">
-                            <input name="email-address"
+                            <input name="address"
                                    class="input email address"
                                    type="text"
                                    placeholder="your email"
+                                   value="{{ old('address') }}"
                             >
                         </div>
                         <div class="form-group">
-                            <textarea name="email-message" class="input email message" cols="40" rows="10" placeholder="message"></textarea>
+                            <textarea name="message" class="input email message" cols="80" rows="8" placeholder="message">{{ old('message') }}</textarea>
+                        </div>
+                        <div class="form-group recaptcha">
+                            {!! Recaptcha::render() !!}
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary">
-                               SEND
+                            <button type="submit"
+                                    class="btn btn-primary"
+                            >
+                               HOWDY
                             </button>
                         </div>
+
                     </form>
                 </div>
                 <hr>

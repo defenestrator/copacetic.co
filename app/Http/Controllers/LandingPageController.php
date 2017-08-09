@@ -2,14 +2,36 @@
 
 namespace App\Http\Controllers;
 
+use App\Contact;
 use Illuminate\Http\Request;
+use App\Mail\LandingPageContact;
+use Illuminate\Support\Facades\Mail;
+use App\Http\Controllers\Controller;
+use ReCaptcha\ReCaptcha;
 
 class LandingPageController extends Controller
 {
-    public function email(Request $request)
+
+    /**
+     * @param Request $request
+     * @param Contact $contact
+     * @return mixed
+     */
+    public function email(Request $request, Contact $contact)
     {
-//        dd($request);
-        // send email to mailgun, distribute to
-        return \Redirect::route('welcome')->with('success', 'Thanks for contacting us, we will respond as soon as possible.' );
+
+         $this->validate($request, [
+            'address' => 'bail|required|email|min:6|max:255',
+            'message' => 'required|min:8|max:640',
+            'g-recaptcha-response' => 'recaptcha|required'
+        ]);
+        $contact->create([
+            'address' => $request->address,
+            'message' => $request->message,
+        ]);
+
+        // send email to mailgun, which will distribute to administrators
+        Mail::to('landingpage@mg.copacetic.co')->send(new LandingPageContact());
+        return \Redirect::route('welcome')->with('success', 'Thanks for writing, we will respond as soon as possible.' );
     }
 }
