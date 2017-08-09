@@ -26,6 +26,7 @@
             }
 
             .flex-center {
+                text-align: center;
                 align-items: center;
                 display: flex;
                 justify-content: center;
