@@ -278,7 +278,7 @@
                     <div class="square-content">
                         <div class="table">
                             <div class="table-cell square-links">
-                                Increase quality and velocity.
+                                Quality <em>and</em> velocity.
                             </div>
                         </div>
                     </div>
