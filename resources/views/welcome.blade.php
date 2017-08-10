@@ -38,7 +38,6 @@
 
             .content {
                 text-align: center;
-                position: absolute;
                 top:20px;
             }
             .btn {
