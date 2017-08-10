@@ -80,7 +80,9 @@
                 text-transform: uppercase;
                 line-height:1.8rem;
             }
-
+            .promo-img {
+                height:150px;
+            }
             .form-group { padding-top:.4em; }
             .footer { font-size: 0.67rem; padding-top: .5rem; }
             .input { width: 304px; border-radius: 0.5em; line-height: 1.5rem;}
