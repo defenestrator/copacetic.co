@@ -23,15 +23,14 @@
             .full-height {
                 background: linear-gradient(rgb(255,250,240),rgb(242,229,255));
                 height: 100vh;
-                width:100%;
             }
 
             .flex-center {
-                text-align: center;
-                align-items: center;
                 display: flex;
                 justify-content: center;
+                align-items: center;
             }
+            .flex-center:before, .flex-center:after
 
             .position-ref {
                 position: relative;
