@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <title>Feel Good Software Delivery</title>
 
         <!-- Fonts -->
@@ -12,25 +13,20 @@
         <!-- Styles -->
         <style>
             html, body {
-                background: rgb(242,229,255);
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 margin: 0;
-                height: 100vh;
-            }
-
-            .full-height {
-                background: linear-gradient(rgb(255,250,240),rgb(242,229,255));
-                height: 100vh;
+                background: rgb(242,229,255);
+                height:100vh;
             }
 
             .flex-center {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                background: linear-gradient(rgb(255,250,240),rgb(242,229,255));
             }
-            .flex-center:before, .flex-center:after
 
             .position-ref {
                 position: relative;
@@ -40,6 +36,7 @@
                 text-align: center;
                 top:20px;
             }
+
             .btn {
                 display: inline-block;
                 padding: 6px 12px;
@@ -61,6 +58,7 @@
                 border: 1px solid transparent;
                 border-radius: 4px;
             }
+
             .btn-primary {
                 background-color: #cd9aae;
                 border-color: #87616b;
@@ -70,6 +68,7 @@
             .links {
                 padding: .5em;
             }
+
             .links > a {
                 color: #636b6f;
                 padding: 0 1em;
@@ -80,36 +79,61 @@
                 text-transform: uppercase;
                 line-height:1.8rem;
             }
+
+            .img-wrap { display: inline-block; }
+
             .promo-img {
-                height:150px;
+                display:inline-block;
+                margin: 0 auto;
             }
+
             .form-group { padding-top:.4em; }
+
             .footer { font-size: 0.67rem; padding-top: .5rem; }
-            .input { width: 304px; border-radius: 0.5em; line-height: 1.5rem;}
-            .success, .errors {  margin:0 auto; width: 304px; padding:.2rem 0; border-radius:0.5rem;  }
+
+            .input {
+                width: 304px;
+                border-radius: 0.5em;
+                line-height: 1.5rem;
+            }
+
+            .success, .errors {
+                margin:0 auto;
+                width: 304px;
+                padding:.2rem 0;
+                border-radius:0.5rem;
+            }
+
             .errors{ background: #f9f9c0; border: 1px solid #ffff00; }
+
             .message-list-item { text-align: left; list-style-type: none; }
+
             .success {background: #acf99f; border: 1px solid #2e5d2e; }
+
             .btn-big { width: 304px;}
+
+            /* Vendor Styles */
             .g-recaptcha {display: inline-block;}
+
         </style>
         <script src="https://unpkg.com/vue"></script>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <div class="flex-center position-ref">
 
             <div class="content">
-                <img src="/images/copacetic.co-logo-web.png"
-                     class="promo-img"
-                     title="Feel Good Software Delivery Consulting, Copacetic"
-                     alt="Feel Good Software Delivery Consulting, Copacetic."
-                />
+                <div class="img-wrap">
+                    <img src="/images/copacetic.co-logo-web.png"
+                         class="promo-img"
+                         title="Feel Good Software Delivery Consulting, Copacetic"
+                         alt="Feel Good Software Delivery Consulting, Copacetic."
+                    />
+                </div>
                 <div class="links">
                     <a href="#development">Make</a>
                     <a href="#operations">Deliver</a>
                     <a href="#analysis">Learn</a>
                     <a href="#maintenance">Change</a>
-                    <a href="#recovery">Help</a>
                 </div>
 
                 @if ($errors->count() >= 1)
@@ -129,10 +153,10 @@
                         </ul>
                     </div>
                 @else
-                    <div class="converse">Start a conversation.</div>
+                    <div class="converse">Talk to me.</div>
                 @endif
                 <div class="email-capture">
-                    <form method="POST" action="{{ route('landing-page-email') }}">
+                    <form method="POST" action="{{ route('contact-form') }}">
                         {{ csrf_field() }}
                         <div class="form-group">
                             <input name="email"
@@ -167,6 +191,7 @@
                             @else
                                 <a href="{{ route('login') }}">Login</a>
                                 <a href="{{ route('register') }}">Register</a>
+                                <a href="{{ route('continuity') }}">Help</a>
                                 @endauth
                         </div>
                     @endif
@@ -176,6 +201,7 @@
                     <p>&copy; Copacetic Media </p>
                     <p>{{ \Carbon\Carbon::now('America/Denver') }}</p>
                 </div>
+
             </div>
         </div>
     </body>

@@ -18,4 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::post('/landing-page-email', "LandingPageController@email")->name('landing-page-email');
+Route::get('/continuity', 'ServiceOfferingsController@continuity')->name('continuity');
+Route::post('/contact-form', "ContactFormController@create")->name('contact-form');

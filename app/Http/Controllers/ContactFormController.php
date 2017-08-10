@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Mail\LandingPageContact;
 use Illuminate\Support\Facades\Mail;
 
-class LandingPageController extends Controller
+class ContactFormController extends Controller
 {
 
     /**
@@ -15,7 +15,7 @@ class LandingPageController extends Controller
      * @param Contact $contact
      * @return mixed
      */
-    public function email(Request $request, Contact $contact)
+    public function create(Request $request, Contact $contact)
     {
 
          $this->validate($request, [
