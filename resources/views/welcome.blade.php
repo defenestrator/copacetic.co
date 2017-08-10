@@ -346,7 +346,7 @@
                                    class="input email address"
                                    type="text"
                                    placeholder="your email"
-                                   value="{{ old('address') }}"
+                                   value="{{ old('email') }}"
                             >
                         </div>
                         <div class="form-group">
