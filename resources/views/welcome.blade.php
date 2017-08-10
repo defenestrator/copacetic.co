@@ -175,20 +175,20 @@
             }
 
             .img1 {
-                background-image: url('images/US_Navy_041203-N-5154G-059_A_Hull_Maintenance_Technician_3rd_Class_Petty_Officer,_assigned_to_the_Engineering_Department_Repair_Division,_fabricates_a_metal_star_for_the_holiday_tree_aboard_the_Nimitz-class_aircraft_car.jpg');
+                background-image: url('images/make.jpg');
             }
             .img2 {
-                background-image: url('images/winter-road-arrow-74780.jpeg');
+                background-image: url('images/deliver.jpeg');
             }
             .img3 {
-                background-image: url('images/dame-tu-mano.jpg');
+                background-image: url('images/help.jpg');
 
             }
             .img4 {
                 background-image: url('images/learn.jpg');
             }
             .img5 {
-                background-image: url('images/Adams_The_Tetons_and_the_Snake_River.jpg');
+                background-image: url('images/change.jpg');
             }
 
             /*  following just for the demo */
