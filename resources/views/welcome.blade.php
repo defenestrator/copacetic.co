@@ -35,6 +35,7 @@
             .content {
                 text-align: center;
                 top:20px;
+                width:100%;
             }
 
             .btn {
@@ -65,11 +66,13 @@
                 color:white;
             }
 
-            .links {
+            .footer { font-size: 0.67rem; padding: .5rem 0; }
+
+            .footer-links {
                 padding: .5em;
             }
 
-            .links > a {
+            .footer-links > a {
                 color: #636b6f;
                 padding: 0 1em;
                 font-size: 12px;
@@ -89,7 +92,7 @@
 
             .form-group { padding-top:.4em; }
 
-            .footer { font-size: 0.67rem; padding-top: .5rem; }
+
 
             .input {
                 width: 304px;
@@ -113,8 +116,92 @@
             .btn-big { width: 304px;}
 
             /* Vendor Styles */
+
             .g-recaptcha {display: inline-block;}
 
+            .square {
+                float:left;
+                position: relative;
+                width: 30%;
+                padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
+                margin:1.66%;
+                background-color:transparent;
+                border-radius: 1em;
+                overflow:hidden;
+                color: #636b6f;
+            }
+
+            .square-content {
+                position:absolute;
+                height:90%; /* = 100% - 2*5% padding */
+                width:90%; /* = 100% - 2*5% padding */
+                padding: 5%;
+
+            }
+            .table{
+                display:table;
+                width:100%;
+                height:100%;
+            }
+            .table-cell{
+                display:table-cell;
+                vertical-align:middle;
+            }
+            /*  For list */
+            ul{
+                text-align:left;
+                margin:5% 0 0;
+                padding:0;
+                list-style-position:inside;
+            }
+            li{
+                margin: 0 0 0 5%;
+                padding:0;
+            }
+
+            /*  For responsive images as background */
+
+            .bg {
+                background-position:center center;
+                background-repeat:no-repeat;
+                background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
+
+            }
+            .square-links > a, .square-links p  {
+                color: #ffffff;
+                font-weight: 600;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            .img1 {
+                background-image: url('images/US_Navy_041203-N-5154G-059_A_Hull_Maintenance_Technician_3rd_Class_Petty_Officer,_assigned_to_the_Engineering_Department_Repair_Division,_fabricates_a_metal_star_for_the_holiday_tree_aboard_the_Nimitz-class_aircraft_car.jpg');
+            }
+            .img2 {
+                background-image: url('images/winter-road-arrow-74780.jpeg');
+            }
+            .img3 {
+                background-image: url('images/dame-tu-mano.jpg');
+
+            }
+            .img4 {
+                background-image: url('images/learn.jpg');
+            }
+            .img5 {
+                background-image: url('images/Adams_The_Tetons_and_the_Snake_River.jpg');
+            }
+
+            /*  following just for the demo */
+
+
+            .offerings {
+                color: #fff;
+                text-align:center;
+            }
+            p{
+                margin:0;
+                padding:0;
+            }
         </style>
         <script src="https://unpkg.com/vue"></script>
     </head>
@@ -129,13 +216,109 @@
                          alt="Feel Good Software Delivery Consulting, Copacetic."
                     />
                 </div>
-                <div class="links">
-                    <a href="#development">Make</a>
-                    <a href="#operations">Deliver</a>
-                    <a href="#analysis">Learn</a>
-                    <a href="#maintenance">Change</a>
+                <div class="offerings">
+                <!-- 1st row verticaly centered text in the square columns -->
+
+                <div class="square bg img1">
+                    <a href="#development">
+                    <div class="square-content">
+                        <div class="table">
+                            <div class="table-cell square-links">
+                                <p>Make</p>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
                 </div>
 
+                <div class="square">
+                    <div class="square-content">
+                        <div class="table">
+                            <div class="table-cell">
+                                The cake is no good until you can eat it.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="square bg img2">
+                    <a href="#operations">
+                    <div class="square-content">
+                        <div class="table">
+                            <div class="table-cell square-links">
+                               <p>Deliver</p>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+
+                <!-- 2nd row verticaly centered images in square columns -->
+
+                <div class="square">
+                    <div class="square-content">
+                        <div class="table">
+                            <div class="table-cell">
+                                Software that feels good.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="square bg img3">
+                    <a href="#operations">
+                    <div class="square-content">
+                        <div class="table">
+                            <div class="table-cell square-links">
+                                <p>Help</p>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                <div class="square">
+                    <div class="square-content">
+                        <div class="table">
+                            <div class="table-cell square-links">
+                                Increase quality and velocity.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3rd row responsive images in background with centered content -->
+
+                <div class="square bg img4">
+                    <a href="#analysis">
+                    <div class="square-content">
+                        <div class="table">
+                            <div class="table-cell square-links">
+                               <p>Learn</p>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                <div class="square">
+                    <div class="square-content">
+                        <div class="table">
+                            <div class="table-cell square-links">
+                                Do it again.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="square bg img5">
+                    <a href="#maintenance">
+                    <div class="square-content">
+                        <div class="table">
+                            <div class="table-cell square-links">
+                                <p>Change</p>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                </div>
+                <hr>
                 @if ($errors->count() >= 1)
                     <div class="errors">
                         @foreach($errors->all() as $error)
@@ -153,7 +336,7 @@
                         </ul>
                     </div>
                 @else
-                    <div class="converse">Talk to me.</div>
+                    <div class="converse">I can help. Talk to me.</div>
                 @endif
                 <div class="email-capture">
                     <form method="POST" action="{{ route('contact-form') }}">
@@ -183,25 +366,24 @@
                     </form>
                 </div>
                 <hr>
-                <div class="links">
-                    @if (Route::has('login'))
-                        <div class="footer links">
-                            @auth
-                            <a href="{{ url('/home') }}">Home</a>
-                            @else
-                                <a href="{{ route('login') }}">Login</a>
-                                <a href="{{ route('register') }}">Register</a>
-                                <a href="{{ route('continuity') }}">Help</a>
-                                @endauth
-                        </div>
-                    @endif
-
-                </div>
                 <div class="footer">
+                    <div class="links">
+                        @if (Route::has('login'))
+                            <div class="footer-links">
+                                @auth
+                                <a href="{{ url('/home') }}">Home</a>
+                                @else
+                                    <a href="{{ route('login') }}">Login</a>
+                                    <a href="{{ route('register') }}">Register</a>
+
+                                    @endauth
+                            </div>
+                        @endif
+
+                    </div>
                     <p>&copy; Copacetic Media </p>
                     <p>{{ \Carbon\Carbon::now('America/Denver') }}</p>
                 </div>
-
             </div>
         </div>
     </body>
