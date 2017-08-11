@@ -448,6 +448,7 @@
             </div>
         </div>
     <script>
+        // Probably the worst javascript written by anyone in 2017.
         link=document.createElement('link');
         link.href='https://fonts.googleapis.com/css?family=Raleway:100,600';
         link.rel='stylesheet';
@@ -455,9 +456,9 @@
         // Get the modal
         var makeModal = document.getElementById('makeModal');
         var deliverModal = document.getElementById('deliverModal');
-        var learnModal = document.getElementById('deliverModal');
-        var changeModal = document.getElementById('deliverModal');
-        var helpModal = document.getElementById('deliverModal');
+        var learnModal = document.getElementById('learnModal');
+        var changeModal = document.getElementById('changeModal');
+        var helpModal = document.getElementById('helpModal');
 
         // Get the button that opens the modal
         var make = document.getElementById("make");
