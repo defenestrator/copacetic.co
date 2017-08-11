@@ -469,9 +469,9 @@
         // Get the <span> element that closes the modal
         var makeSpan = document.getElementsByClassName("close")[0];
         var deliverSpan = document.getElementsByClassName("close")[1];
-        var learnSpan = document.getElementsByClassName("close")[2];
-        var changeSpan = document.getElementsByClassName("close")[3];
-        var helpSpan = document.getElementsByClassName("close")[4];
+        var learnSpan = document.getElementsByClassName("close")[3];
+        var changeSpan = document.getElementsByClassName("close")[4];
+        var helpSpan = document.getElementsByClassName("close")[2];
         // When the user clicks the button, open the modal
         make.onclick = function() {
             makeModal.style.display = "block";
