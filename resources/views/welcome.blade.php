@@ -60,7 +60,7 @@
 
             .btn-primary {
                 border-color: #cd9aae;
-                color:#131b1f;
+                background-color: rgb(242,229,255);
             }
 
             .footer { font-size: 0.67rem; padding: .5rem 0; }
@@ -85,7 +85,7 @@
             .form-group { padding-top:.4em; }
 
             .email-capture {
-                background-color: #131b1f;
+                background-color: #131718;
                 padding : 1rem;
                 clear:both;
             }
@@ -106,13 +106,13 @@
                 border-radius:0.5rem;
             }
 
-            .errors{ background: #f9f9c0; border: 1px solid #ffff00; font-size:1.0rem; }
+            .errors{ background: #f9f9c0; border: 1px solid #ffff00; font-size:1.0rem; font-weight:600; }
 
             .message-list-item { text-align: left; list-style-type: none;}
 
             .success {background: #acf99f; border: 1px solid #2e5d2e; }
 
-            .btn-big { width: 152px;}
+            .btn-big { width: 304px;}
 
             /* Vendor Styles */
 
@@ -421,7 +421,7 @@
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-big">
-                               DO SOMETHING!
+                               THIS PROBABLY DOES SOMETHING
                             </button>
                         </div>
 
