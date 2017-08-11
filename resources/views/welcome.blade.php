@@ -25,7 +25,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background: linear-gradient(rgb(255,250,240),rgb(242,229,255));
+                background: linear-gradient(rgb(255,250,240),rgb(255,250,240));
             }
 
             .position-ref {
@@ -34,6 +34,7 @@
 
             .content {
                 text-align: center;
+                font-size: 1.4rem;
                 top:20px;
                 width:100%;
             }
@@ -128,7 +129,7 @@
                 background-color:transparent;
                 border-radius: 1em;
                 overflow:hidden;
-                color: #636b6f;
+                color: #434b4f;
             }
 
             .square-content {
@@ -171,27 +172,29 @@
                 font-weight: 600;
                 text-decoration: none;
                 text-transform: uppercase;
+                font-size: 1.6rem;
+            }
+            .deliver  {
+
+                background-color:black;
             }
 
-            .img1 {
+            .make {
                 background-image: url('images/make.jpg');
             }
-            .img2 {
-                background-image: url('images/deliver.jpeg');
+            .deliver {
+                background-image: url('images/deliver2.jpg');
             }
-            .img3 {
+            .help {
                 background-image: url('images/help.jpg');
 
             }
-            .img4 {
+            .learn {
                 background-image: url('images/learn.jpg');
             }
-            .img5 {
+            .change {
                 background-image: url('images/change.jpg');
             }
-
-            /*  following just for the demo */
-
 
             .offerings {
                 color: #fff;
@@ -215,10 +218,28 @@
                          alt="Feel Good Software Delivery Consulting, Copacetic."
                     />
                 </div>
+                @if ($errors->count() >= 1)
+                    <div class="errors">
+                        @foreach($errors->all() as $error)
+                            <ul>
+                                <li class="message-list-item">{{ $error }}</li>
+                            </ul>
+                        @endforeach
+                    </div>
+                @elseif (session('success'))
+                    <div class="success">
+                        <ul>
+                            <li class="message-list-item">
+                                {{ session('success') }}
+                            </li>
+                        </ul>
+                    </div>
+                @else
+                @endif
                 <div class="offerings">
                 <!-- 1st row verticaly centered text in the square columns -->
 
-                <div class="square bg img1">
+                <div class="square bg make">
                     <a href="#development">
                     <div class="square-content">
                         <div class="table">
@@ -239,7 +260,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="square bg img2">
+                <div class="square bg deliver">
                     <a href="#operations">
                     <div class="square-content">
                         <div class="table">
@@ -262,7 +283,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="square bg img3">
+                <div class="square bg help">
                     <a href="#operations">
                     <div class="square-content">
                         <div class="table">
@@ -285,7 +306,7 @@
 
                 <!-- 3rd row responsive images in background with centered content -->
 
-                <div class="square bg img4">
+                <div class="square bg learn">
                     <a href="#analysis">
                     <div class="square-content">
                         <div class="table">
@@ -305,7 +326,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="square bg img5">
+                <div class="square bg change">
                     <a href="#maintenance">
                     <div class="square-content">
                         <div class="table">
@@ -318,25 +339,7 @@
                 </div>
                 </div>
                 <hr>
-                @if ($errors->count() >= 1)
-                    <div class="errors">
-                        @foreach($errors->all() as $error)
-                            <ul>
-                                <li class="message-list-item">{{ $error }}</li>
-                            </ul>
-                        @endforeach
-                    </div>
-                @elseif (session('success'))
-                    <div class="success">
-                        <ul>
-                            <li class="message-list-item">
-                                {{ session('success') }}
-                            </li>
-                        </ul>
-                    </div>
-                @else
-                    <div class="converse">I can help. Talk to me.</div>
-                @endif
+                <div class="converse">I can help. Talk to me.</div>
                 <div class="email-capture">
                     <form method="POST" action="{{ route('contact-form') }}">
                         {{ csrf_field() }}
@@ -349,15 +352,15 @@
                             >
                         </div>
                         <div class="form-group">
-                            <textarea name="message" class="input email message" rows="8" placeholder="message">{{ old('message') }}</textarea>
+                            <textarea name="message" class="input email message" rows="8" placeholder="message">
+                                {{ old('message') }}
+                            </textarea>
                         </div>
                         <div class="form-group recaptcha">
                             {!! Recaptcha::render() !!}
                         </div>
                         <div class="form-group">
-                            <button type="submit"
-                                    class="btn btn-primary btn-big"
-                            >
+                            <button type="submit" class="btn btn-primary btn-big">
                                HOWDY!
                             </button>
                         </div>
