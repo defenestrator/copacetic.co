@@ -180,7 +180,7 @@
                 background-image: url('images/make.jpg');
             }
             .deliver {
-                background-image: url('images/deliver2.jpg');
+                background-image: url('images/deliver.jpg');
             }
             .help {
                 background-image: url('images/help.jpg');
