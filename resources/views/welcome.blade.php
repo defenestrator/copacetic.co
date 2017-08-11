@@ -150,7 +150,6 @@
             /*  For list */
             ul{
                 text-align:left;
-                margin:5% 0 0;
                 padding:0;
                 list-style-position:inside;
             }
@@ -373,8 +372,8 @@
                                 @auth
                                 <a href="{{ url('/home') }}">Home</a>
                                 @else
-                                    <a href="{{ route('login') }}">Login</a>
-                                    <a href="{{ route('register') }}">Register</a>
+                                    {{--<a href="{{ route('login') }}">Login</a>--}}
+                                    {{--<a href="{{ route('register') }}">Register</a>--}}
 
                                     @endauth
                             </div>
