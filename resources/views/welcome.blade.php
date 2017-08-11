@@ -58,11 +58,6 @@
                 border-radius: 4px;
             }
 
-            .btn-primary {
-                border-color: #cd9aae;
-                background-color: rgb(242,229,255);
-            }
-
             .footer { font-size: 0.67rem; padding: .5rem 0; }
 
             .footer-links {
@@ -106,13 +101,18 @@
                 border-radius:0.5rem;
             }
 
-            .errors{ background: #f9f9c0; border: 1px solid #ffff00; font-size:1.0rem; font-weight:600; }
+            .errors{
+                background: #f9f9c0;
+                border: 1px solid #ffff00;
+                font-size:1.0rem;
+                font-weight:600;
+            }
 
             .message-list-item { text-align: left; list-style-type: none;}
 
             .success {background: #acf99f; border: 1px solid #2e5d2e; }
 
-            .btn-big { width: 304px;}
+            .btn-big { width: 304px; border-color: #cd9aae;  background: rgb(242,229,255);}
 
             /* Vendor Styles */
 
@@ -420,7 +420,7 @@
                             {!! Recaptcha::render() !!}
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-big">
+                            <button type="submit" class="btn btn-big">
                                THIS PROBABLY DOES SOMETHING
                             </button>
                         </div>
