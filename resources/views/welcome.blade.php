@@ -59,9 +59,8 @@
             }
 
             .btn-primary {
-                background-color: #cd9aae;
-                border-color: #87616b;
-                color:white;
+                border-color: #cd9aae;
+                color:#131b1f;
             }
 
             .footer { font-size: 0.67rem; padding: .5rem 0; }
@@ -84,6 +83,15 @@
             .top-wrapper { margin: 1em auto; }
 
             .form-group { padding-top:.4em; }
+
+            .email-capture {
+                background-color: #131b1f;
+                padding : 1rem;
+                clear:both;
+            }
+            .i-can-help {
+                color:white;
+            }
 
             .input {
                 width: 304px;
@@ -382,18 +390,19 @@
                 </div>
                 </div>
                 <hr>
-                @if ($errors->count() >= 1)
-                    <div class="errors">
-                        @foreach($errors->all() as $error)
-                            <ul>
-                                <li class="message-list-item">{{ $error }}</li>
-                            </ul>
-                        @endforeach
-                    </div>
-                @else
-                    <div>I can help. Talk to me.</div>
-                @endif
+
                 <div class="email-capture">
+                    @if ($errors->count() >= 1)
+                        <div class="errors">
+                            @foreach($errors->all() as $error)
+                                <ul>
+                                    <li class="message-list-item">{{ $error }}</li>
+                                </ul>
+                            @endforeach
+                        </div>
+                    @else
+                        <div class="i-can-help">We can help.</div>
+                    @endif
                     <form method="POST" action="{{ route('contact-form') }}">
                         {{ csrf_field() }}
                         <div class="form-group">
@@ -412,7 +421,7 @@
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-big">
-                               SOMETHING!
+                               DO SOMETHING!
                             </button>
                         </div>
 

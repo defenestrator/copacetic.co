@@ -30,6 +30,6 @@ class ContactFormController extends Controller
         $contact = Contact::all()->last();
         // send email to mailgun, which will distribute to administrators
         Mail::to('landingpage@mg.copacetic.co')->send(new LandingPageContact($contact));
-        return \Redirect::route('welcome')->with('success', 'Thanks, expect a reply soon.' );
+        return \Redirect::route('welcome')->with('success', 'Thanks! Expect a reply soon.' );
     }
 }
