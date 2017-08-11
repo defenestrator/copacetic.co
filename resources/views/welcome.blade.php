@@ -405,16 +405,14 @@
                             >
                         </div>
                         <div class="form-group">
-                            <textarea name="message" class="input email message" rows="8" placeholder="message">
-                                {{ old('message') }}
-                            </textarea>
+                            <textarea name="message" placeholder="message" class="input email message" rows="8" >{{ old('message') }}</textarea>
                         </div>
                         <div class="form-group recaptcha">
                             {!! Recaptcha::render() !!}
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-big">
-                               HOWDY!
+                               SOMETHING!
                             </button>
                         </div>
 
