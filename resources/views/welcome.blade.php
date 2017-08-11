@@ -7,9 +7,6 @@
 
         <title>Feel Good Software Delivery</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
         <!-- Styles -->
         <style>
             html, body {
@@ -123,6 +120,7 @@
                 border-radius: 1em;
                 overflow:hidden;
                 color: #434b4f;
+
             }
 
             .square-content {
@@ -158,6 +156,7 @@
                 background-position:center center;
                 background-repeat:no-repeat;
                 background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
+                cursor: pointer;
 
             }
 
@@ -175,6 +174,7 @@
                 text-decoration: none;
                 text-transform: uppercase;
                 font-size: 1.4rem;
+
             }
             .make {
                 background-image: url('images/make.jpg');
@@ -198,7 +198,7 @@
                 text-align:center;
             }
             /* The Modal (background) */
-            .modal {
+            #makeModal, #deliverModal, #learnModal, #changeModal, #helpModal {
                 display: none; /* Hidden by default */
                 position: fixed; /* Stay in place */
                 z-index: 1; /* Sit on top */
@@ -219,6 +219,7 @@
                 padding: 20px;
                 border: 1px solid #888;
                 width: 80%;
+                color:black;
             }
 
             /* The Close Button */
@@ -262,8 +263,7 @@
                 </div>
                 <div class="offerings">
                 <!-- 1st row of service offerings grid -->
-                <div class="square bg make">
-                    <a href="#development" id="make">
+                <div class="square bg make" id="make">
                     <div class="square-content">
                         <div class="table">
                             <div class="table-cell square-links">
@@ -271,9 +271,14 @@
                             </div>
                         </div>
                     </div>
-                    </a>
-                </div>
 
+                </div>
+                <div id="makeModal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Some text in the Make Modal</p>
+                    </div>
+                </div>
                 <div class="square">
                     <div class="square-content">
                         <div class="table">
@@ -284,7 +289,6 @@
                     </div>
                 </div>
                 <div class="square bg deliver" id="deliver">
-                    <a href="#operations">
                     <div class="square-content">
                         <div class="table">
                             <div class="table-cell square-links">
@@ -292,9 +296,13 @@
                             </div>
                         </div>
                     </div>
-                    </a>
                 </div>
-
+                <div id="deliverModal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Some text in the Deliver Modal</p>
+                    </div>
+                </div>
                 <!-- 2nd row row of service offerings grid  -->
 
                 <div class="square">
@@ -307,7 +315,6 @@
                     </div>
                 </div>
                 <div class="square bg help" id="help">
-                    <a href="#operations">
                     <div class="square-content">
                         <div class="table">
                             <div class="table-cell square-links">
@@ -315,7 +322,12 @@
                             </div>
                         </div>
                     </div>
-                    </a>
+                </div>
+                <div id="helpModal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Some text in the Help Modal</p>
+                    </div>
                 </div>
                 <div class="square">
                     <div class="square-content">
@@ -330,7 +342,6 @@
                 <!-- 3rd row row row your boat of service offerings grid  -->
 
                 <div class="square bg learn" id="learn">
-                    <a href="#analysis">
                     <div class="square-content">
                         <div class="table">
                             <div class="table-cell square-links">
@@ -338,8 +349,13 @@
                             </div>
                         </div>
                     </div>
-                    </a>
                 </div>
+                <div id="learnModal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>Some text in the Learn Modal</p>
+                        </div>
+                    </div>
                 <div class="square">
                     <div class="square-content">
                         <div class="table">
@@ -350,7 +366,6 @@
                     </div>
                 </div>
                 <div class="square bg change" id="change">
-                    <a href="#maintenance">
                     <div class="square-content">
                         <div class="table">
                             <div class="table-cell square-links">
@@ -358,7 +373,12 @@
                             </div>
                         </div>
                     </div>
-                    </a>
+                </div>
+                <div id="changeModal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Some text in the Change Modal</p>
+                    </div>
                 </div>
                 </div>
                 <hr>
@@ -421,29 +441,80 @@
             </div>
         </div>
     <script>
+        link=document.createElement('link');
+        link.href='https://fonts.googleapis.com/css?family=Raleway:100,600';
+        link.rel='stylesheet';
+        document.getElementsByTagName('head')[0].appendChild(link);
         // Get the modal
-        var modal = document.getElementById('myModal');
+        var makeModal = document.getElementById('makeModal');
+        var deliverModal = document.getElementById('deliverModal');
+        var learnModal = document.getElementById('deliverModal');
+        var changeModal = document.getElementById('deliverModal');
+        var helpModal = document.getElementById('deliverModal');
 
         // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-
+        var make = document.getElementById("make");
+        var deliver = document.getElementById("deliver");
+        var learn = document.getElementById("learn");
+        var change = document.getElementById("change");
+        var help = document.getElementById("help");
         // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
+        var makeSpan = document.getElementsByClassName("close")[0];
+        var deliverSpan = document.getElementsByClassName("close")[1];
+        var learnSpan = document.getElementsByClassName("close")[2];
+        var changeSpan = document.getElementsByClassName("close")[3];
+        var helpSpan = document.getElementsByClassName("close")[4];
         // When the user clicks the button, open the modal
-        btn.onclick = function() {
-            modal.style.display = "block";
+        make.onclick = function() {
+            makeModal.style.display = "block";
+
+        }
+        deliver.onclick = function() {
+            deliverModal.style.display = "block";
+        }
+        learn.onclick = function() {
+            learnModal.style.display = "block";
+        }
+        change.onclick = function() {
+            changeModal.style.display = "block";
+        }
+        help.onclick = function() {
+            helpModal.style.display = "block";
         }
 
         // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
+        makeSpan.onclick = function() {
+            makeModal.style.display = "none";
+        }
+        deliverSpan.onclick = function() {
+            deliverModal.style.display = "none";
+        }
+        learnSpan.onclick = function() {
+            learnModal.style.display = "none";
+        }
+        changeSpan.onclick = function() {
+            changeModal.style.display = "none";
+        }
+        helpSpan.onclick = function() {
+            helpModal.style.display = "none";
         }
 
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
+            if (event.target == makeModal) {
+                makeModal.style.display = "none";
+            }
+            if (event.target == deliverModal) {
+                deliverModal.style.display = "none";
+            }
+            if (event.target == learnModal) {
+                learnModal.style.display = "none";
+            }
+            if (event.target == changeModal) {
+                changeModal.style.display = "none";
+            }
+            if (event.target == helpModal) {
+                helpModal.style.display = "none";
             }
         }
     </script>
