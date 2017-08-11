@@ -34,7 +34,7 @@
 
             .content {
                 text-align: center;
-                font-size: 1.4rem;
+                font-size: 1.2rem;
                 top:20px;
                 width:100%;
             }
@@ -84,16 +84,9 @@
                 line-height:1.8rem;
             }
 
-            .img-wrap { display: inline-block; }
-
-            .promo-img {
-                display:inline-block;
-                margin: 0 auto;
-            }
+            .top-wrapper { margin: 1em auto; }
 
             .form-group { padding-top:.4em; }
-
-
 
             .input {
                 width: 304px;
@@ -108,13 +101,13 @@
                 border-radius:0.5rem;
             }
 
-            .errors{ background: #f9f9c0; border: 1px solid #ffff00; }
+            .errors{ background: #f9f9c0; border: 1px solid #ffff00; font-size:1.0rem; }
 
-            .message-list-item { text-align: left; list-style-type: none; }
+            .message-list-item { text-align: left; list-style-type: none;}
 
             .success {background: #acf99f; border: 1px solid #2e5d2e; }
 
-            .btn-big { width: 304px;}
+            .btn-big { width: 152px;}
 
             /* Vendor Styles */
 
@@ -167,18 +160,22 @@
                 background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
 
             }
+
+            /*  For responsive images */
+            .square-content .rs {
+                width:auto;
+                height:auto;
+                max-height:90%;
+                max-width:100%;
+            }
+
             .square-links > a, .square-links p  {
                 color: #ffffff;
                 font-weight: 600;
                 text-decoration: none;
                 text-transform: uppercase;
-                font-size: 1.6rem;
+                font-size: 1.4rem;
             }
-            .deliver  {
-
-                background-color:black;
-            }
-
             .make {
                 background-image: url('images/make.jpg');
             }
@@ -200,47 +197,73 @@
                 color: #fff;
                 text-align:center;
             }
-            p{
-                margin:0;
-                padding:0;
+            /* The Modal (background) */
+            .modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                padding-top: 100px; /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            }
+
+            /* Modal Content */
+            .modal-content {
+                background-color: #fefefe;
+                margin: auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%;
+            }
+
+            /* The Close Button */
+            .close {
+                color: #aaaaaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
             }
         </style>
-        <script src="https://unpkg.com/vue"></script>
     </head>
     <body>
         <div class="flex-center position-ref">
 
             <div class="content">
-                <div class="img-wrap">
-                    <img src="/images/copacetic.co-logo-web.png"
-                         class="promo-img"
-                         title="Feel Good Software Delivery Consulting, Copacetic"
-                         alt="Feel Good Software Delivery Consulting, Copacetic."
-                    />
-                </div>
-                @if ($errors->count() >= 1)
-                    <div class="errors">
-                        @foreach($errors->all() as $error)
+                <div class="top-wrapper">
+                    @if ($errors->count() >= 1)
+                        <div class="errors">
                             <ul>
-                                <li class="message-list-item">{{ $error }}</li>
+                                <li class="message-list-item">Scroll down&hellip;something is borked.</li>
                             </ul>
-                        @endforeach
-                    </div>
-                @elseif (session('success'))
-                    <div class="success">
-                        <ul>
-                            <li class="message-list-item">
-                                {{ session('success') }}
-                            </li>
-                        </ul>
-                    </div>
-                @else
-                @endif
+                        </div>
+                    @elseif (session('success'))
+                        <div class="success">
+                            <ul>
+                                <li class="message-list-item">
+                                    {{ session('success') }}
+                                </li>
+                            </ul>
+                        </div>
+                    @else
+                        <img src="images/copacetic.co-face-120.png" />
+                    @endif
+                </div>
                 <div class="offerings">
-                <!-- 1st row verticaly centered text in the square columns -->
-
+                <!-- 1st row of service offerings grid -->
                 <div class="square bg make">
-                    <a href="#development">
+                    <a href="#development" id="make">
                     <div class="square-content">
                         <div class="table">
                             <div class="table-cell square-links">
@@ -255,12 +278,12 @@
                     <div class="square-content">
                         <div class="table">
                             <div class="table-cell">
-                                The cake is no good until you can eat it.
+                                There is no cake.
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="square bg deliver">
+                <div class="square bg deliver" id="deliver">
                     <a href="#operations">
                     <div class="square-content">
                         <div class="table">
@@ -272,7 +295,7 @@
                     </a>
                 </div>
 
-                <!-- 2nd row verticaly centered images in square columns -->
+                <!-- 2nd row row of service offerings grid  -->
 
                 <div class="square">
                     <div class="square-content">
@@ -283,7 +306,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="square bg help">
+                <div class="square bg help" id="help">
                     <a href="#operations">
                     <div class="square-content">
                         <div class="table">
@@ -304,9 +327,9 @@
                     </div>
                 </div>
 
-                <!-- 3rd row responsive images in background with centered content -->
+                <!-- 3rd row row row your boat of service offerings grid  -->
 
-                <div class="square bg learn">
+                <div class="square bg learn" id="learn">
                     <a href="#analysis">
                     <div class="square-content">
                         <div class="table">
@@ -326,7 +349,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="square bg change">
+                <div class="square bg change" id="change">
                     <a href="#maintenance">
                     <div class="square-content">
                         <div class="table">
@@ -339,7 +362,17 @@
                 </div>
                 </div>
                 <hr>
-                <div class="converse">I can help. Talk to me.</div>
+                @if ($errors->count() >= 1)
+                    <div class="errors">
+                        @foreach($errors->all() as $error)
+                            <ul>
+                                <li class="message-list-item">{{ $error }}</li>
+                            </ul>
+                        @endforeach
+                    </div>
+                @else
+                    <div>I can help. Talk to me.</div>
+                @endif
                 <div class="email-capture">
                     <form method="POST" action="{{ route('contact-form') }}">
                         {{ csrf_field() }}
@@ -375,10 +408,9 @@
                                 @auth
                                 <a href="{{ url('/home') }}">Home</a>
                                 @else
-                                    {{--<a href="{{ route('login') }}">Login</a>--}}
-                                    {{--<a href="{{ route('register') }}">Register</a>--}}
-
-                                    @endauth
+                                    <a href="{{ route('login') }}">Login</a>
+                                    <a href="{{ route('register') }}">Register</a>
+                                @endauth
                             </div>
                         @endif
 
@@ -388,5 +420,32 @@
                 </div>
             </div>
         </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
     </body>
 </html>
