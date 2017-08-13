@@ -14,7 +14,7 @@
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 margin: 0;
-                background: rgb(242,229,255);
+                background: #99ccfa;
                 height:100vh;
             }
 
@@ -86,6 +86,8 @@
             }
             .i-can-help {
                 color:white;
+                font-weight:300;
+                letter-spacing:.18em;
             }
 
             .input {
@@ -112,7 +114,11 @@
 
             .success {background: #acf99f; border: 1px solid #2e5d2e; }
 
-            .btn-big { width: 304px; border-color: #cd9aae;  background: rgb(242,229,255);}
+            .btn-big { width: 152px; border-color: #ffffff;  background: #cccccc; }
+            .btn-big:hover, .btn-big:active {
+                border-color: #66c5ff;
+                background-color: #99ccfa;
+            }
 
             /* Vendor Styles */
 
@@ -421,7 +427,7 @@
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-big">
-                               THIS PROBABLY DOES SOMETHING
+                               Say Howdy
                             </button>
                         </div>
 
@@ -450,7 +456,7 @@
     <script>
         // Probably the worst javascript written by anyone in 2017.
         link=document.createElement('link');
-        link.href='https://fonts.googleapis.com/css?family=Raleway:100,600';
+        link.href='https://fonts.googleapis.com/css?family=Raleway:100,300,600';
         link.rel='stylesheet';
         document.getElementsByTagName('head')[0].appendChild(link);
         // Get the modal
