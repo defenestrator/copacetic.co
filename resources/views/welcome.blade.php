@@ -28,7 +28,6 @@
             .position-ref {
                 position: relative;
             }
-
             .content {
                 text-align: center;
                 font-size: 1.2rem;
@@ -114,10 +113,20 @@
 
             .success {background: #acf99f; border: 1px solid #2e5d2e; }
 
-            .btn-big { width: 152px; border-color: #ffffff;  background: #cccccc; }
-            .btn-big:hover, .btn-big:active {
+            .btn-big {
+                width: 203px;
+                border-color: #ffffff;
+                background: #cccccc;
+                transition: all .5s;
+                -webkit-transition: all .5s;
+                transition-timing-function: linear;
+            }
+            .btn-big:hover, .btn-big:focus {
                 border-color: #66c5ff;
                 background-color: #99ccfa;
+                transition: all .5s;
+                -webkit-transition: all .5s;
+                transition-timing-function: linear;
             }
 
             /* Vendor Styles */
@@ -142,8 +151,50 @@
                 height:90%; /* = 100% - 2*5% padding */
                 width:90%; /* = 100% - 2*5% padding */
                 padding: 5%;
+                font-weight:100;
+                transition: all .5s;
+                -webkit-transition: all .5s;
+            }
+            .square-content:hover {
+                color: #999;
+                font-size:1.15rem;
+                transition: all .5s;
+                -webkit-transition: all .5s;
+                transition-timing-function: ease-in-out;
 
             }
+
+
+            .make .square-content,
+            .deliver .square-content,
+            .learn .square-content,
+            .change .square-content,
+            .help .square-content {
+                color: #ffffff;
+                font-weight: 600;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 1.4rem;
+                transition: all .5s;
+                -webkit-transition: all .5s;
+                transition-timing-function: linear;
+            }
+            .make .square-content:hover,
+            .deliver .square-content:hover,
+            .learn .square-content:hover,
+            .change .square-content:hover,
+            .help .square-content:hover,
+            .make .square-content:focus,
+            .deliver .square-content:focus,
+            .learn .square-content:focus,
+            .change .square-content:focus,
+            .help .square-content:focus {
+                color: #99ccfa;
+                transition: all .5s;
+                -webkit-transition: all .5s;
+                transition-timing-function: linear;
+            }
+
             .table{
                 display:table;
                 width:100%;
@@ -182,14 +233,19 @@
                 max-width:100%;
             }
 
-            .square-links > a, .square-links p  {
-                color: #ffffff;
-                font-weight: 600;
-                text-decoration: none;
-                text-transform: uppercase;
-                font-size: 1.4rem;
-
-            }
+            /*.square-links p  {*/
+                /*color: #ffffff;*/
+                /*font-weight: 600;*/
+                /*text-decoration: none;*/
+                /*text-transform: uppercase;*/
+                /*font-size: 1.4rem;*/
+                /*transition: all 1s;*/
+                /*-webkit-transition: all 1s;*/
+                /*transition-timing-function: linear;*/
+            /*}*/
+            /*.square-links > a:hover, .square-links > a:focus, .square-links p:hover, .square-links p:focus {*/
+                 /*color: #99ccfa;*/
+             /*}*/
             .make {
                 background-image: url('images/make.jpg');
             }
@@ -456,7 +512,7 @@
     <script>
         // Probably the worst javascript written by anyone in 2017.
         link=document.createElement('link');
-        link.href='https://fonts.googleapis.com/css?family=Raleway:100,300,600';
+        link.href='https://fonts.googleapis.com/css?family=Lobster|Raleway:100,300,600';
         link.rel='stylesheet';
         document.getElementsByTagName('head')[0].appendChild(link);
         // Get the modal
