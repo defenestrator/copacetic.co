@@ -155,7 +155,7 @@
                 transition: all .5s;
                 -webkit-transition: all .5s;
             }
-            .square-content:hover {
+            .square-content:hover, .square-content:focus {
                 color: #999;
                 font-size:1.15rem;
                 transition: all .5s;
