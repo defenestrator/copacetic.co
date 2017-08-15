@@ -600,11 +600,13 @@
                         toggleVisibility(modal);
                 });
                 document.getElementById(modal).addEventListener("click", function () {
-                    if ( document.getElementById(event.target.id) == close) {
-                         return toggleVisibility(modal);
-                    } else {
+                    if (document.getElementById(event.target.id) == close) {
                         return toggleVisibility(modal);
                     }
+                    else if (document.getElementById(event.target.id) == null) {
+                        return;
+                    }
+                    return toggleVisibility(modal);
                 });
             });
         }
