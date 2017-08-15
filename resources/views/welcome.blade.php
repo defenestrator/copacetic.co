@@ -446,10 +446,10 @@
                             <div class="continuityServices">
                                 <h2>Service Continuity</h2>
                                 <ul>
-                                    <li>A practical approach to service delivery management</li>
                                     <li>Outages happen; Lower your cost to recover</li>
-                                    <li>Learn more from mistakes with custom solutions to suit your needs.</li>
+                                    <li>A practical approach to service delivery management</li>
                                     <li>Cultivate strong defensive SecOps</li>
+                                    <li>Learn more from mistakes with custom solutions to suit your needs.</li>
                                 </ul>
                             </div>
                         </div>
