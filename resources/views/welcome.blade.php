@@ -292,6 +292,7 @@
             }
             #makeModal .modal-content {
                 background-image: url('images/make.jpg');
+                background-position:top left;
             }
             #deliverModal .modal-content {
                 background-position:center center;
@@ -304,13 +305,13 @@
                 background-size:cover;
             }
             #learnModal .modal-content {
-                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/learn.jpg');
-                background-position:center center;
+                background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/learn.jpg');
+                background-position:top center;
                 background-repeat:no-repeat;
                 background-size:cover;
             }
             #changeModal .modal-content {
-                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/change.jpg');
+                background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/change.jpg');
                 background-position:center center;
                 background-repeat:no-repeat;
                 background-size:cover;
@@ -377,10 +378,10 @@
                             <div class="developmentServices">
                                 <h2>Development</h2>
                                 <ul>
-                                    <li>Talent Acquisition</li>
-                                    <li>Back Office</li>
-                                    <li>Products</li>
-                                    <li>Software</li>
+                                    <li>Curated talent acquisition</li>
+                                    <li>Flash-team resources</li>
+                                    <li>Back Office solutions</li>
+                                    <li>Application development</li>
                                 </ul>
                             </div>
                         </div>
@@ -414,8 +415,8 @@
                                     <li>Value Stream Mapping</li>
                                     <li>Constraint Mitigation</li>
                                     <li>Continuous Integration Delivery Pipelines</li>
-                                    <li>Security and Transparency like peanut butter and jelly.</li>
-                                    <li>Version Control Systems Strategy</li>
+                                    <li>Security and Transparency like peanut butter and jelly</li>
+                                    <li>Version Control Systems Logistics</li>
                                     <li>Developer Support</li>
                                 </ul>
                             </div>
@@ -477,9 +478,9 @@
                                 <div class="reportingServices">
                                     <h2>Reporting</h2>
                                     <ul>
-                                        <li>Get feedback early and often</li>
-                                        <li>Monitoring and Logging are essential.</li>
+                                        <li>Monitoring and Logging essentials.</li>
                                         <li>Make mistakes, failures and the unknown less costly.</li>
+                                        <li>Get usage feedback early and often</li>
                                     </ul>
                                 </div>
                             </div>
@@ -606,7 +607,7 @@
                     else if (document.getElementById(event.target.id) == null) {
                         return;
                     }
-                    return toggleVisibility(modal);
+                    toggleVisibility(modal);
                 });
             });
         }
