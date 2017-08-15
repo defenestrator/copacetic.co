@@ -17,7 +17,9 @@
                 background: #99ccfa;
                 height:100vh;
             }
-
+            p {
+                margin: .1em 0;
+            }
             .flex-center {
                 display: flex;
                 justify-content: center;
@@ -57,7 +59,14 @@
                 border-radius: 4px;
             }
 
-            .footer { font-size: 0.67rem; padding: .5rem 0; }
+            .footer {
+                font-size: 0.67rem;
+                padding: .5rem 0;
+            }
+
+            .copyright {
+                font-family:"Lobster", sans-serif
+            }
 
             .footer-links {
                 padding: .5em;
@@ -83,11 +92,11 @@
                 padding : 1rem;
                 clear:both;
             }
-
             .i-can-help {
                 color:white;
-                font-weight:300;
-                letter-spacing:.18em;
+                font-family:"Lobster", sans-serif;
+                font-size:2.1rem;
+                padding:2rem;
             }
 
             .input {
@@ -130,8 +139,6 @@
                 transition-timing-function: linear;
             }
 
-            /* Vendor Styles */
-
             .g-recaptcha {display: inline-block;}
 
             .square {
@@ -165,6 +172,7 @@
                 transition-timing-function: ease-in-out;
 
             }
+
             .make .square-content,
             .deliver .square-content,
             .learn .square-content,
@@ -217,16 +225,15 @@
             }
 
             /*  For responsive images as background */
-
             .bg {
                 background-position:center center;
                 background-repeat:no-repeat;
-                background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
+                background-size:cover;
                 cursor: pointer;
 
             }
 
-            /*  For responsive images */
+            /*  For responsive content images */
             /*.square-content .rs {*/
                 /*width:auto;*/
                 /*height:auto;*/
@@ -255,12 +262,12 @@
                 color: #fff;
                 text-align:center;
             }
-            /* The Modal (background) */
+            /* Modal */
             .modal {
-                display: none; /* Hidden by default */
-                position: fixed; /* Stay in place */
-                z-index: 1; /* Sit on top */
-                padding-top: 50px; /* Location of the box */
+                display: none;
+                position: fixed;
+                z-index: 1;
+                padding-top: 50px;
                 left: 0;
                 top: 0;
                 width: 100%;
@@ -313,7 +320,7 @@
                 margin: 1em auto;
                 text-align:justify;
             }
-            /* The Close Button */
+            /* Modal Close Button */
             .close {
                 color: #cfcfcf;
                 float: right;
@@ -563,7 +570,7 @@
                         @endif
 
                     </div>
-                    <p>&copy; Copacetic Media </p>
+                    <p class="copyright">&copy; Copacetic Media </p>
                     <p>{{ \Carbon\Carbon::now('America/Denver') }}</p>
                 </div>
             </div>
