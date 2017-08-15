@@ -632,7 +632,7 @@
         }
 
         // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
+        window.onmousedown = function(event) {
             if (event.target == makeModal) {
                 makeModal.style.display = "none";
             }
