@@ -512,7 +512,7 @@
                                     <li>Sometimes you have to cut bait.</li>
                                     <li>This will hurt.</li>
                                     <li>Bullshit detector set to <em>gnat's ass.</em></li>
-                                    <li>Here to help.</li>
+                                    <li>We're here to help.</li>
                                 </ul>
                             </div>
                         </div>
