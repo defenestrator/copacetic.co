@@ -368,7 +368,7 @@
                 </div>
                 <div class="modal" id="makeModal">
                     <div class="modal-content">
-                        <span class="close">&times;</span>
+                        <span class="close" id="makeClose">&times;</span>
                         <div class="developmentServices">
                             <h2>Development</h2>
                             <ul>
@@ -403,7 +403,7 @@
                 </div>
                 <div class="modal" id="deliverModal">
                     <div class="modal-content">
-                        <span class="close">&times;</span>
+                        <span class="close" id="deliverClose">&times;</span>
                         <div class="operationsServices">
                             <h2>Operations</h2>
                             <ul>
@@ -437,7 +437,7 @@
                 </div>
                 <div class="modal" id="helpModal">
                     <div class="modal-content">
-                        <span class="close">&times;</span>
+                        <span class="close" id="helpClose">&times;</span>
                         <div class="continuityServices">
                             <h2>Service Continuity</h2>
                             <ul>
@@ -469,7 +469,7 @@
                 </div>
                 <div class="modal" id="learnModal">
                         <div class="modal-content">
-                            <span class="close">&times;</span>
+                            <span class="close" id="learnClose">&times;</span>
                             <div class="reportingServices">
                                 <h2>Reporting</h2>
                                 <ul>
@@ -500,7 +500,7 @@
                 </div>
                 <div class="modal" id="changeModal">
                     <div class="modal-content">
-                        <span class="close">&times;</span>
+                        <span class="close" id="changeClose">&times;</span>
                         <div class="disruptionServices">
                             <h2>Disruption as a Service</h2>
                             <ul>
@@ -572,83 +572,42 @@
             </div>
         </div>
     <script>
-        // Probably the worst javascript written by anyone in 2017.
+        // Async loading of external fonts.
         link=document.createElement('link');
         link.href='https://fonts.googleapis.com/css?family=Lobster|Raleway:100,300,600';
         link.rel='stylesheet';
         document.getElementsByTagName('head')[0].appendChild(link);
-        // Get the modal
-        var makeModal = document.getElementById('makeModal');
-        var deliverModal = document.getElementById('deliverModal');
-        var learnModal = document.getElementById('learnModal');
-        var changeModal = document.getElementById('changeModal');
-        var helpModal = document.getElementById('helpModal');
 
-        // Get the button that opens the modal
-        var make = document.getElementById("make");
-        var deliver = document.getElementById("deliver");
-        var learn = document.getElementById("learn");
-        var change = document.getElementById("change");
-        var help = document.getElementById("help");
-        // Get the <span> element that closes the modal
-        var makeSpan = document.getElementsByClassName("close")[0];
-        var deliverSpan = document.getElementsByClassName("close")[1];
-        var learnSpan = document.getElementsByClassName("close")[3];
-        var changeSpan = document.getElementsByClassName("close")[4];
-        var helpSpan = document.getElementsByClassName("close")[2];
-        // When the user clicks the button, open the modal
-        make.onclick = function() {
-            makeModal.style.display = "block";
-
-        }
-        deliver.onclick = function() {
-            deliverModal.style.display = "block";
-        }
-        learn.onclick = function() {
-            learnModal.style.display = "block";
-        }
-        change.onclick = function() {
-            changeModal.style.display = "block";
-        }
-        help.onclick = function() {
-            helpModal.style.display = "block";
+        var toggleVisibility = function (targetName) {
+            var target = document.getElementById(targetName);
+            console.log("target = " + target);
+            console.log('target style display: ' + target.style.display)
+            if (target.style.display === "block") {
+                target.style.display = "none";
+            } else {
+                target.style.display = "block";
+            }
         }
 
-        // When the user clicks on <span> (x), close the modal
-        makeSpan.onclick = function() {
-            makeModal.style.display = "none";
-        }
-        deliverSpan.onclick = function() {
-            deliverModal.style.display = "none";
-        }
-        learnSpan.onclick = function() {
-            learnModal.style.display = "none";
-        }
-        changeSpan.onclick = function() {
-            changeModal.style.display = "none";
-        }
-        helpSpan.onclick = function() {
-            helpModal.style.display = "none";
-        }
+        var modalBuilder = function() {
+            var offerings = ["make", "deliver", "help", "learn", "change"];
+            offerings.forEach( function(offering) {
+                var listener = document.getElementById(offering).getAttribute("id")
+                var targetName = listener + "Modal";
+                var close = listener + "Close";
+                document.getElementById(listener).addEventListener("click", function () {
+                    toggleVisibility(targetName);
+                });
+                document.getElementById(close).addEventListener("click", function () {
+                    toggleVisibility(targetName);
+                });
+                document.getElementById(targetName).addEventListener("click", function() {
+                    toggleVisibility(targetName);
+                });
+            });
 
-        // When the user clicks anywhere outside of the modal, close it
-        window.onmousedown = function(event) {
-            if (event.target == makeModal) {
-                makeModal.style.display = "none";
-            }
-            if (event.target == deliverModal) {
-                deliverModal.style.display = "none";
-            }
-            if (event.target == learnModal) {
-                learnModal.style.display = "none";
-            }
-            if (event.target == changeModal) {
-                changeModal.style.display = "none";
-            }
-            if (event.target == helpModal) {
-                helpModal.style.display = "none";
-            }
         }
+        window.onload = modalBuilder();
     </script>
     </body>
 </html>
