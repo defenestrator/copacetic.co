@@ -346,7 +346,15 @@
                 <div id="makeModal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
-                        <p>Some text in the Make Modal</p>
+                        <div class="developmentServices">
+                            <h2>Development Services</h2>
+                            <ul>
+                                <li>Talent Acquisition</li>
+                                <li>Back Office</li>
+                                <li>Products</li>
+                                <li>Software</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="square">
@@ -370,7 +378,16 @@
                 <div id="deliverModal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
-                        <p>Some text in the Deliver Modal</p>
+                        <div class="operationsServices">
+                            <h2>Operations Services</h2>
+                            <ul>
+                                <li>We can help you build effective Continuous Integration Pipelines</li>
+                                <li>You can have Security and Transparency together. The latter may be the only way to achieve the former.</li>
+                                <li>Organizational Architecture</li>
+                                <li>Version Control Systems Management</li>
+                                <li>Developer Support Infrastructure</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <!-- 2nd row row of service offerings grid  -->
@@ -396,7 +413,15 @@
                 <div id="helpModal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
-                        <p>Some text in the Help Modal</p>
+                        <div class="continuityServices">
+                            <h2>Service Continuity Management</h2>
+                            <ul>
+                                <li>Holistic approach to service delivery</li>
+                                <li>Low Cost Recovery</li>
+                                <li>Custom Solutions</li>
+                                <li>"Good D" Aggressive SecOps</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="square">
@@ -423,7 +448,15 @@
                 <div id="learnModal">
                         <div class="modal-content">
                             <span class="close">&times;</span>
-                            <p>Some text in the Learn Modal</p>
+                            <div class="reportingServices">
+                                <h2>Aggregation and Reporting Services</h2>
+                                <ul>
+                                    <li>Get feedback early and often</li>
+                                    <li>Monitoring and Logging are essential to your business.</li>
+                                    <li>Learn inexpensive lessons, often.</li>
+                                    <li>Essential to "Good D" aggressive Security</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 <div class="square">
@@ -447,7 +480,15 @@
                 <div id="changeModal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
-                        <p>Some text in the Change Modal</p>
+                        <div class="disruptionServices">
+                            <h2>Disruption as a Service</h2>
+                            <ul>
+                                <li>Sometimes you have to cut bait.</li>
+                                <li>The sensitivity of my bullshitometer is set to <em>gnat's ass.</em></li>
+                                <li>This will hurt.</li>
+                                <li>It might head off a catastrophe, </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 </div>
