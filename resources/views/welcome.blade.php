@@ -511,7 +511,7 @@
                                 <ul>
                                     <li>Sometimes you have to cut bait.</li>
                                     <li>This will hurt.</li>
-                                    <li>Bullshit-O-Meter set to <em>gnat's ass.</em></li>
+                                    <li>Bullshit detector set to <em>gnat's ass.</em></li>
                                     <li>Here to help.</li>
                                 </ul>
                             </div>
