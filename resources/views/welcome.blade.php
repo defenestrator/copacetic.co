@@ -83,6 +83,7 @@
                 padding : 1rem;
                 clear:both;
             }
+
             .i-can-help {
                 color:white;
                 font-weight:300;
@@ -155,9 +156,7 @@
                 transition: all .5s;
                 -webkit-transition: all .5s;
             }
-            .square-content p {
-                margin: .1em 0;
-            }
+
             .square-content:hover, .square-content:focus {
                 color: #999;
                 font-size:1.15rem;
@@ -166,14 +165,13 @@
                 transition-timing-function: ease-in-out;
 
             }
-
-
             .make .square-content,
             .deliver .square-content,
             .learn .square-content,
             .change .square-content,
             .help .square-content {
                 color: #ffffff;
+                font-family:"Raleway", sans-serif;
                 font-weight: 600;
                 text-decoration: none;
                 text-transform: uppercase;
@@ -385,7 +383,6 @@
                         <div class="table">
                             <div class="table-cell">
                                 <p>There is no cake, </p>
-                                <p>a wizard stole your pockets, </p>
                                 <p>winter is here.</p>
                                 <p>What now?</p>
                             </div>
@@ -421,7 +418,7 @@
                     <div class="square-content">
                         <div class="table">
                             <div class="table-cell">
-                                Build software that feels good.
+                                <p>Build software that feels good.</p>
                             </div>
                         </div>
                     </div>
@@ -453,7 +450,7 @@
                     <div class="square-content">
                         <div class="table">
                             <div class="table-cell square-links">
-                                Security, quality <em>and</em> velocity.
+                                <p>Security, quality <em>and</em> velocity.</p>
                             </div>
                         </div>
                     </div>
@@ -484,7 +481,7 @@
                     <div class="square-content">
                         <div class="table">
                             <div class="table-cell square-links">
-                                Do it again.
+                                <p>Do it again.</p>
                             </div>
                         </div>
                     </div>
@@ -578,10 +575,9 @@
         link.rel='stylesheet';
         document.getElementsByTagName('head')[0].appendChild(link);
 
+        // display:block || display:none
         var toggleVisibility = function (targetName) {
             var target = document.getElementById(targetName);
-            console.log("target = " + target);
-            console.log('target style display: ' + target.style.display)
             if (target.style.display === "block") {
                 target.style.display = "none";
             } else {
@@ -589,20 +585,21 @@
             }
         }
 
+        // build modal click handlers
         var modalBuilder = function() {
             var offerings = ["make", "deliver", "help", "learn", "change"];
             offerings.forEach( function(offering) {
                 var listener = document.getElementById(offering).getAttribute("id")
-                var targetName = listener + "Modal";
+                var modal = listener + "Modal";
                 var close = listener + "Close";
                 document.getElementById(listener).addEventListener("click", function () {
-                    toggleVisibility(targetName);
+                    toggleVisibility(modal);
+                });
+                document.getElementById(modal).addEventListener("click", function() {
+                    toggleVisibility(modal);
                 });
                 document.getElementById(close).addEventListener("click", function () {
-                    toggleVisibility(targetName);
-                });
-                document.getElementById(targetName).addEventListener("click", function() {
-                    toggleVisibility(targetName);
+                    toggleVisibility(modal);
                 });
             });
 
