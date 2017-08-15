@@ -155,6 +155,9 @@
                 transition: all .5s;
                 -webkit-transition: all .5s;
             }
+            .square-content p {
+                margin: .1em 0;
+            }
             .square-content:hover, .square-content:focus {
                 color: #999;
                 font-size:1.15rem;
@@ -226,26 +229,13 @@
             }
 
             /*  For responsive images */
-            .square-content .rs {
-                width:auto;
-                height:auto;
-                max-height:90%;
-                max-width:100%;
-            }
-
-            /*.square-links p  {*/
-                /*color: #ffffff;*/
-                /*font-weight: 600;*/
-                /*text-decoration: none;*/
-                /*text-transform: uppercase;*/
-                /*font-size: 1.4rem;*/
-                /*transition: all 1s;*/
-                /*-webkit-transition: all 1s;*/
-                /*transition-timing-function: linear;*/
+            /*.square-content .rs {*/
+                /*width:auto;*/
+                /*height:auto;*/
+                /*max-height:90%;*/
+                /*max-width:100%;*/
             /*}*/
-            /*.square-links > a:hover, .square-links > a:focus, .square-links p:hover, .square-links p:focus {*/
-                 /*color: #99ccfa;*/
-             /*}*/
+
             .make {
                 background-image: url('images/make.jpg');
             }
@@ -268,33 +258,66 @@
                 text-align:center;
             }
             /* The Modal (background) */
-            #makeModal, #deliverModal, #learnModal, #changeModal, #helpModal {
+            .modal {
                 display: none; /* Hidden by default */
                 position: fixed; /* Stay in place */
                 z-index: 1; /* Sit on top */
-                padding-top: 100px; /* Location of the box */
+                padding-top: 50px; /* Location of the box */
                 left: 0;
                 top: 0;
-                width: 100%; /* Full width */
-                height: 100%; /* Full height */
-                overflow: auto; /* Enable scroll if needed */
+                width: 100%;
+                height: 100%;
+                overflow: auto;
                 background-color: rgb(0,0,0); /* Fallback color */
-                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                background-color: rgba(0,0,0,0.8);
             }
 
             /* Modal Content */
             .modal-content {
-                background-color: #fefefe;
+                color: #fefefe;
                 margin: auto;
                 padding: 20px;
-                border: 1px solid #888;
-                width: 80%;
-                color:black;
+                border: 1px solid #666;
+                border-radius: .5em;
+                width: 88%;
+                background-color:black;
+                background-position:top center;
+                background-repeat:no-repeat;
+                background-size:cover;
             }
-
+            #makeModal .modal-content {
+                background-image: url('images/make.jpg');
+            }
+            #deliverModal .modal-content {
+                background-position:center center;
+                background-image: url('images/deliver.jpg');
+            }
+            #helpModal .modal-content  {
+                background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/help.jpg');
+                background-position:bottom center;
+                background-repeat:no-repeat;
+                background-size:cover;
+            }
+            #learnModal .modal-content {
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/learn.jpg');
+                background-position:center center;
+                background-repeat:no-repeat;
+                background-size:cover;
+            }
+            #changeModal .modal-content {
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/change.jpg');
+                background-position:center center;
+                background-repeat:no-repeat;
+                background-size:cover;
+            }
+            .modal-content li{
+                list-style-type: square;
+                margin: 1em auto;
+                text-align:justify;
+            }
             /* The Close Button */
             .close {
-                color: #aaaaaa;
+                color: #cfcfcf;
                 float: right;
                 font-size: 28px;
                 font-weight: bold;
@@ -302,7 +325,7 @@
 
             .close:hover,
             .close:focus {
-                color: #000;
+                color: #fefefe;
                 text-decoration: none;
                 cursor: pointer;
             }
@@ -343,11 +366,11 @@
                     </div>
 
                 </div>
-                <div id="makeModal">
+                <div class="modal" id="makeModal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
                         <div class="developmentServices">
-                            <h2>Development Services</h2>
+                            <h2>Development</h2>
                             <ul>
                                 <li>Talent Acquisition</li>
                                 <li>Back Office</li>
@@ -364,7 +387,7 @@
                                 <p>There is no cake, </p>
                                 <p>a wizard stole your pockets, </p>
                                 <p>winter is here.</p>
-                                <p>Which way do you go?</p>
+                                <p>What now?</p>
                             </div>
                         </div>
                     </div>
@@ -378,28 +401,27 @@
                         </div>
                     </div>
                 </div>
-                <div id="deliverModal">
+                <div class="modal" id="deliverModal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
                         <div class="operationsServices">
-                            <h2>Operations Services</h2>
+                            <h2>Operations</h2>
                             <ul>
-                                <li>We can help you build effective Continuous Integration Pipelines</li>
-                                <li>You can have Security and Transparency together. The latter may be the only way to achieve the former.</li>
-                                <li>Organizational Architecture</li>
-                                <li>Version Control Systems Management</li>
-                                <li>Developer Support Infrastructure</li>
+                                <li>Value Stream Mapping</li>
+                                <li>Constraint Mitigation</li>
+                                <li>Continuous Integration Delivery Pipelines</li>
+                                <li>Security and Transparency like peanut butter and jelly.</li>
+                                <li>Version Control Systems Strategy</li>
+                                <li>Developer Support</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <!-- 2nd row row of service offerings grid  -->
-
                 <div class="square">
                     <div class="square-content">
                         <div class="table">
                             <div class="table-cell">
-                                Software that feels good.
+                                Build software that feels good.
                             </div>
                         </div>
                     </div>
@@ -413,16 +435,16 @@
                         </div>
                     </div>
                 </div>
-                <div id="helpModal">
+                <div class="modal" id="helpModal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
                         <div class="continuityServices">
-                            <h2>Service Continuity Management</h2>
+                            <h2>Service Continuity</h2>
                             <ul>
-                                <li>Holistic approach to service delivery</li>
-                                <li>Low Cost Recovery</li>
-                                <li>Custom Solutions</li>
-                                <li>"Good D" Aggressive SecOps</li>
+                                <li>A practical approach to service delivery management</li>
+                                <li>Outages happen; Lower your cost to recover</li>
+                                <li>Learn more from mistakes with custom solutions to suit your needs.</li>
+                                <li>Cultivate strong defensive SecOps</li>
                             </ul>
                         </div>
                     </div>
@@ -431,14 +453,11 @@
                     <div class="square-content">
                         <div class="table">
                             <div class="table-cell square-links">
-                                Quality <em>and</em> velocity.
+                                Security, quality <em>and</em> velocity.
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- 3rd row row row your boat of service offerings grid  -->
-
                 <div class="square bg learn" id="learn">
                     <div class="square-content">
                         <div class="table">
@@ -448,16 +467,15 @@
                         </div>
                     </div>
                 </div>
-                <div id="learnModal">
+                <div class="modal" id="learnModal">
                         <div class="modal-content">
                             <span class="close">&times;</span>
                             <div class="reportingServices">
-                                <h2>Aggregation and Reporting Services</h2>
+                                <h2>Reporting</h2>
                                 <ul>
                                     <li>Get feedback early and often</li>
-                                    <li>Monitoring and Logging are essential to your business.</li>
-                                    <li>Learn inexpensive lessons, often.</li>
-                                    <li>Essential to "Good D" aggressive Security</li>
+                                    <li>Monitoring and Logging are essential.</li>
+                                    <li>Make mistakes, failures and the unknown less costly.</li>
                                 </ul>
                             </div>
                         </div>
@@ -480,16 +498,16 @@
                         </div>
                     </div>
                 </div>
-                <div id="changeModal">
+                <div class="modal" id="changeModal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
                         <div class="disruptionServices">
                             <h2>Disruption as a Service</h2>
                             <ul>
                                 <li>Sometimes you have to cut bait.</li>
-                                <li>The sensitivity of my bullshitometer is set to <em>gnat's ass.</em></li>
                                 <li>This will hurt.</li>
-                                <li>It might head off a catastrophe, </li>
+                                <li>Bullshit-O-Meter set to <em>gnat's ass.</em></li>
+                                <li>Here to help.</li>
                             </ul>
                         </div>
                     </div>
