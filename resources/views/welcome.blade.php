@@ -324,7 +324,7 @@
             .close {
                 color: #cfcfcf;
                 float: right;
-                font-size: 28px;
+                font-size: 32px;
                 font-weight: bold;
             }
 
@@ -360,162 +360,162 @@
                     @endif
                 </div>
                 <div class="offerings">
-                <!-- 1st row of service offerings grid -->
-                <div class="square bg make" id="make">
-                    <div class="square-content">
-                        <div class="table">
-                            <div class="table-cell square-links">
-                                <p>Make</p>
+                    <!-- 1st row of service offerings grid -->
+                    <div class="square bg make" id="make">
+                        <div class="square-content">
+                            <div class="table">
+                                <div class="table-cell square-links">
+                                    <p>Make</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                </div>
-                <div class="modal" id="makeModal">
-                    <div class="modal-content">
-                        <span class="close" id="makeClose">&times;</span>
-                        <div class="developmentServices">
-                            <h2>Development</h2>
-                            <ul>
-                                <li>Talent Acquisition</li>
-                                <li>Back Office</li>
-                                <li>Products</li>
-                                <li>Software</li>
-                            </ul>
-                        </div>
                     </div>
-                </div>
-                <div class="square">
-                    <div class="square-content">
-                        <div class="table">
-                            <div class="table-cell">
-                                <p>There is no cake, </p>
-                                <p>winter is here.</p>
-                                <p>What now?</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="square bg deliver" id="deliver">
-                    <div class="square-content">
-                        <div class="table">
-                            <div class="table-cell square-links">
-                               <p>Deliver</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal" id="deliverModal">
-                    <div class="modal-content">
-                        <span class="close" id="deliverClose">&times;</span>
-                        <div class="operationsServices">
-                            <h2>Operations</h2>
-                            <ul>
-                                <li>Value Stream Mapping</li>
-                                <li>Constraint Mitigation</li>
-                                <li>Continuous Integration Delivery Pipelines</li>
-                                <li>Security and Transparency like peanut butter and jelly.</li>
-                                <li>Version Control Systems Strategy</li>
-                                <li>Developer Support</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="square">
-                    <div class="square-content">
-                        <div class="table">
-                            <div class="table-cell">
-                                <p>Build software that feels good.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="square bg help" id="help">
-                    <div class="square-content">
-                        <div class="table">
-                            <div class="table-cell square-links">
-                                <p>Help</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal" id="helpModal">
-                    <div class="modal-content">
-                        <span class="close" id="helpClose">&times;</span>
-                        <div class="continuityServices">
-                            <h2>Service Continuity</h2>
-                            <ul>
-                                <li>A practical approach to service delivery management</li>
-                                <li>Outages happen; Lower your cost to recover</li>
-                                <li>Learn more from mistakes with custom solutions to suit your needs.</li>
-                                <li>Cultivate strong defensive SecOps</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="square">
-                    <div class="square-content">
-                        <div class="table">
-                            <div class="table-cell square-links">
-                                <p>Security, quality <em>and</em> velocity.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="square bg learn" id="learn">
-                    <div class="square-content">
-                        <div class="table">
-                            <div class="table-cell square-links">
-                               <p>Learn</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal" id="learnModal">
+                    <div class="modal" id="makeModal">
                         <div class="modal-content">
-                            <span class="close" id="learnClose">&times;</span>
-                            <div class="reportingServices">
-                                <h2>Reporting</h2>
+                            <span class="close" id="makeClose">&times;</span>
+                            <div class="developmentServices">
+                                <h2>Development</h2>
                                 <ul>
-                                    <li>Get feedback early and often</li>
-                                    <li>Monitoring and Logging are essential.</li>
-                                    <li>Make mistakes, failures and the unknown less costly.</li>
+                                    <li>Talent Acquisition</li>
+                                    <li>Back Office</li>
+                                    <li>Products</li>
+                                    <li>Software</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                <div class="square">
-                    <div class="square-content">
-                        <div class="table">
-                            <div class="table-cell square-links">
-                                <p>Do it again.</p>
+                    <div class="square">
+                        <div class="square-content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    <p>There is no cake, </p>
+                                    <p>winter is here.</p>
+                                    <p>What now?</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="square bg change" id="change">
-                    <div class="square-content">
-                        <div class="table">
-                            <div class="table-cell square-links">
-                                <p>Change</p>
+                    <div class="square bg deliver" id="deliver">
+                        <div class="square-content">
+                            <div class="table">
+                                <div class="table-cell square-links">
+                                   <p>Deliver</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal" id="changeModal">
-                    <div class="modal-content">
-                        <span class="close" id="changeClose">&times;</span>
-                        <div class="disruptionServices">
-                            <h2>Disruption as a Service</h2>
-                            <ul>
-                                <li>Sometimes you have to cut bait.</li>
-                                <li>This will hurt.</li>
-                                <li>Bullshit-O-Meter set to <em>gnat's ass.</em></li>
-                                <li>Here to help.</li>
-                            </ul>
+                    <div class="modal" id="deliverModal">
+                        <div class="modal-content">
+                            <span class="close" id="deliverClose">&times;</span>
+                            <div class="operationsServices">
+                                <h2>Operations</h2>
+                                <ul>
+                                    <li>Value Stream Mapping</li>
+                                    <li>Constraint Mitigation</li>
+                                    <li>Continuous Integration Delivery Pipelines</li>
+                                    <li>Security and Transparency like peanut butter and jelly.</li>
+                                    <li>Version Control Systems Strategy</li>
+                                    <li>Developer Support</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="square">
+                        <div class="square-content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    <p>Build software that feels good.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square bg help" id="help">
+                        <div class="square-content">
+                            <div class="table">
+                                <div class="table-cell square-links">
+                                    <p>Help</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="helpModal">
+                        <div class="modal-content">
+                            <span class="close" id="helpClose">&times;</span>
+                            <div class="continuityServices">
+                                <h2>Service Continuity</h2>
+                                <ul>
+                                    <li>A practical approach to service delivery management</li>
+                                    <li>Outages happen; Lower your cost to recover</li>
+                                    <li>Learn more from mistakes with custom solutions to suit your needs.</li>
+                                    <li>Cultivate strong defensive SecOps</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="square-content">
+                            <div class="table">
+                                <div class="table-cell square-links">
+                                    <p>Security, quality <em>and</em> velocity.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square bg learn" id="learn">
+                        <div class="square-content">
+                            <div class="table">
+                                <div class="table-cell square-links">
+                                   <p>Learn</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="learnModal">
+                            <div class="modal-content">
+                                <span class="close" id="learnClose">&times;</span>
+                                <div class="reportingServices">
+                                    <h2>Reporting</h2>
+                                    <ul>
+                                        <li>Get feedback early and often</li>
+                                        <li>Monitoring and Logging are essential.</li>
+                                        <li>Make mistakes, failures and the unknown less costly.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="square">
+                        <div class="square-content">
+                            <div class="table">
+                                <div class="table-cell square-links">
+                                    <p>Do it again.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square bg change" id="change">
+                        <div class="square-content">
+                            <div class="table">
+                                <div class="table-cell square-links">
+                                    <p>Change</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="changeModal">
+                        <div class="modal-content">
+                            <span class="close" id="changeClose">&times;</span>
+                            <div class="disruptionServices">
+                                <h2>Disruption as a Service</h2>
+                                <ul>
+                                    <li>Sometimes you have to cut bait.</li>
+                                    <li>This will hurt.</li>
+                                    <li>Bullshit-O-Meter set to <em>gnat's ass.</em></li>
+                                    <li>Here to help.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <hr>
 
@@ -581,36 +581,34 @@
         link.href='https://fonts.googleapis.com/css?family=Lobster|Raleway:100,300,600';
         link.rel='stylesheet';
         document.getElementsByTagName('head')[0].appendChild(link);
+        var offerings = ["make", "deliver", "help", "learn", "change"];
 
-        // display:block || display:none
+
+        // toggle display:block || display:none
         var toggleVisibility = function (targetName) {
             var target = document.getElementById(targetName);
-            if (target.style.display === "block") {
-                target.style.display = "none";
-            } else {
-                target.style.display = "block";
-            }
+            target.style.display = target.style.display == "block" ? "none" : "block";
         }
 
         // build modal click handlers
         var modalBuilder = function() {
-            var offerings = ["make", "deliver", "help", "learn", "change"];
             offerings.forEach( function(offering) {
                 var listener = document.getElementById(offering).getAttribute("id")
                 var modal = listener + "Modal";
                 var close = listener + "Close";
                 document.getElementById(listener).addEventListener("click", function () {
-                    toggleVisibility(modal);
+                        toggleVisibility(modal);
                 });
-                document.getElementById(modal).addEventListener("click", function() {
-                    toggleVisibility(modal);
-                });
-                document.getElementById(close).addEventListener("click", function () {
-                    toggleVisibility(modal);
+                document.getElementById(modal).addEventListener("click", function () {
+                    if ( document.getElementById(event.target.id) == close) {
+                         return toggleVisibility(modal);
+                    } else {
+                        return toggleVisibility(modal);
+                    }
                 });
             });
-
         }
+
         window.onload = modalBuilder();
     </script>
     </body>
