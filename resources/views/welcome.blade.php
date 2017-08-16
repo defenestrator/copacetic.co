@@ -125,17 +125,22 @@
 
             .btn-big {
                 width: 203px;
-                border-color: #ffffff;
-                background: #cccccc;
-                transition: all .5s;
-                -webkit-transition: all .5s;
+                border-color: #d15757;
+                background: #FFFAF0;
+                color: #303637;
+                transition: all .25s;
+                -webkit-transition: all .25s;
                 transition-timing-function: linear;
+                font-family:"Lobster", sans-serif;
+                font-size:1.8rem;
+                padding:0;
             }
             .btn-big:hover, .btn-big:focus {
                 border-color: #66c5ff;
                 background-color: #99ccfa;
-                transition: all .5s;
-                -webkit-transition: all .5s;
+                color: #213047;
+                transition: all .25s;
+                -webkit-transition: all .25s;
                 transition-timing-function: linear;
             }
 
@@ -390,9 +395,7 @@
                         <div class="square-content">
                             <div class="table">
                                 <div class="table-cell">
-                                    <p>There is no cake, </p>
-                                    <p>winter is here.</p>
-                                    <p>What now?</p>
+                                    <p>There is no cake.</p>
                                 </div>
                             </div>
                         </div>
@@ -550,7 +553,7 @@
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-big">
-                               Say Howdy
+                               Howdy
                             </button>
                         </div>
 
