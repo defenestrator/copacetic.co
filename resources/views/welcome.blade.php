@@ -131,8 +131,10 @@
                 transition: all .25s;
                 -webkit-transition: all .25s;
                 transition-timing-function: linear;
-                font-family:"Lobster", sans-serif;
-                font-size:1.8rem;
+                font-weight:600;
+                text-transform: uppercase;
+                font-size:1.2rem;
+                letter-spacing:.5rem;
                 padding:0;
             }
             .btn-big:hover, .btn-big:focus {
@@ -553,7 +555,7 @@
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-big">
-                               Howdy
+                               Howdy!
                             </button>
                         </div>
 
