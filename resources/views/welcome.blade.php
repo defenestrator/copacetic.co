@@ -12,7 +12,7 @@
             html, body {
                 color: #B8AA8E;
                 font-family: 'Raleway', sans-serif;
-                font-weight: 100;
+                font-weight: 300;
                 margin: 0;
                 background: #99ccfa;
                 height:100vh;
@@ -167,7 +167,7 @@
                 height:90%; /* = 100% - 2*5% padding */
                 width:90%; /* = 100% - 2*5% padding */
                 padding: 5%;
-                font-weight:100;
+                font-weight:300;
                 transition: all .2s;
                 -webkit-transition: all .2s;
             }
@@ -593,7 +593,7 @@
     <script>
         // Async loading of external fonts.
         link=document.createElement('link');
-        link.href='https://fonts.googleapis.com/css?family=Lobster|Raleway:100,300,600';
+        link.href='https://fonts.googleapis.com/css?family=Lobster|Raleway:300,600';
         link.rel='stylesheet';
         document.getElementsByTagName('head')[0].appendChild(link);
         var offerings = ["make", "deliver", "help", "learn", "change"];
