@@ -95,8 +95,8 @@
             .i-can-help {
                 color:white;
                 font-family:"Lobster", sans-serif;
-                font-size:2rem;
-                padding:2rem;
+                font-size:2em;
+                padding:1em;
             }
 
             .input {
