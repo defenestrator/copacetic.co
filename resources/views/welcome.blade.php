@@ -280,8 +280,7 @@
                 width: 100%;
                 height: 100%;
                 overflow: auto;
-                background-color: rgb(0,0,0); /* Fallback color */
-                background-color: rgba(0,0,0,0.8);
+                background:rgba(3,7,17, 0.95);
             }
 
             /* Modal Content */
