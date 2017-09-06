@@ -140,8 +140,8 @@
             }
             .btn-big:hover, .btn-big:focus {
                 border-color: #66c5ff;
-                background-color: #99ccfa;
-                color: #2b4563;
+                background-color: #f0f0f0;
+                color: rgba(48, 54, 55, 0.9);
                 transition: all .25s;
                 -webkit-transition: all .2s;
                 transition-timing-function: linear;
