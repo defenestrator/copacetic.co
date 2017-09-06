@@ -129,8 +129,8 @@
                 border-color: #99ccfa;
                 background-color: #f9f9f9;
                 color: rgba(48, 54, 55, 0.8);
-                transition: all .25s;
-                -webkit-transition: all .25s;
+                transition: all .2s;
+                -webkit-transition: all .2s;
                 transition-timing-function: linear;
                 font-weight:600;
                 text-transform: uppercase;
@@ -143,7 +143,7 @@
                 background-color: #99ccfa;
                 color: #2b4563;
                 transition: all .25s;
-                -webkit-transition: all .25s;
+                -webkit-transition: all .2s;
                 transition-timing-function: linear;
             }
 
@@ -168,14 +168,14 @@
                 width:90%; /* = 100% - 2*5% padding */
                 padding: 5%;
                 font-weight:100;
-                transition: all .5s;
-                -webkit-transition: all .5s;
+                transition: all .2s;
+                -webkit-transition: all .2s;
             }
 
             .square-content:hover, .square-content:focus {
                 font-size:1.15rem;
-                transition: all .5s;
-                -webkit-transition: all .5s;
+                transition: all .2s;
+                -webkit-transition: all .2s;
                 transition-timing-function: ease-in-out;
 
             }
@@ -191,8 +191,8 @@
                 text-decoration: none;
                 text-transform: uppercase;
                 font-size: 1.4rem;
-                transition: all .5s;
-                -webkit-transition: all .5s;
+                transition: all .2s;
+                -webkit-transition: all .2s;
                 transition-timing-function: linear;
             }
             .make .square-content:hover,
@@ -206,8 +206,8 @@
             .change .square-content:focus,
             .help .square-content:focus {
                 color: #99ccfa;
-                transition: all .5s;
-                -webkit-transition: all .5s;
+                transition: all .2s;
+                -webkit-transition: all .2s;
                 transition-timing-function: linear;
             }
 
