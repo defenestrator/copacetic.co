@@ -128,7 +128,7 @@
                 width: 203px;
                 border-color: #99ccfa;
                 background-color: #f9f9f9;
-                color: #303637;
+                color: rgba(48, 54, 55, 0.8);
                 transition: all .25s;
                 -webkit-transition: all .25s;
                 transition-timing-function: linear;
@@ -141,7 +141,7 @@
             .btn-big:hover, .btn-big:focus {
                 border-color: #66c5ff;
                 background-color: #99ccfa;
-                color: #213047;
+                color: #2b4563;
                 transition: all .25s;
                 -webkit-transition: all .25s;
                 transition-timing-function: linear;
@@ -342,9 +342,14 @@
                 text-decoration: none;
                 cursor: pointer;
             }
-            .rc-anchor-light {
-                background: none;
-                color: #000;
+            .small {
+                font-size:0.7em;
+                font-family: "Raleway", sans-serif;
+            }
+            .copyright
+            {
+                float:left;
+                padding:0 0 1em 1em;
             }
         </style>
     </head>
@@ -558,9 +563,7 @@
                             {!! Recaptcha::render() !!}
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-big">
-                               Howdy!
-                            </button>
+                            <button type="submit" class="btn btn-big">Howdy</button>
                         </div>
 
                     </form>
@@ -580,8 +583,11 @@
                         @endif
 
                     </div>
-                    <p class="copyright">&copy; Copacetic Media </p>
-                    <p>{{ \Carbon\Carbon::now('America/Denver') }}</p>
+                    <div class="copyright">
+                        <p>&copy; Copacetic Media </p>
+                        <p class="small">{{ \Carbon\Carbon::now('America/Denver') }}</p>
+                    </div>
+
                 </div>
             </div>
         </div>
