@@ -60,7 +60,7 @@
             }
 
             .footer {
-                font-size: 0.67rem;
+                font-size: 1em;
                 padding: .5rem 0;
             }
 
