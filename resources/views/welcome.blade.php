@@ -125,7 +125,7 @@
 
             .btn-big {
                 width: 203px;
-                border-color: #d15757;
+                border-color: #5784d1;
                 background: #FFFAF0;
                 color: #303637;
                 transition: all .25s;
