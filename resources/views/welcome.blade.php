@@ -10,7 +10,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                color: #636b6f;
+                color: #B8AA8E;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 margin: 0;
@@ -88,12 +88,12 @@
             .form-group { padding-top:.4em; }
 
             .email-capture {
-                background-color: #131319;
+                background-color: #626A7C;
                 padding : 1rem;
                 clear:both;
             }
             .i-can-help {
-                color:white;
+                color: #D2D3D5;
                 font-family:"Lobster", sans-serif;
                 font-size:2em;
                 padding:1em;
@@ -103,6 +103,7 @@
                 width: 304px;
                 border-radius: 0.5em;
                 line-height: 1.5rem;
+                padding:.5em;
             }
 
             .success, .errors {
@@ -125,8 +126,8 @@
 
             .btn-big {
                 width: 203px;
-                border-color: #5784d1;
-                background: #FFFAF0;
+                border-color: #99ccfa;
+                background-color: #f9f9f9;
                 color: #303637;
                 transition: all .25s;
                 -webkit-transition: all .25s;
@@ -157,7 +158,7 @@
                 background-color:transparent;
                 border-radius: 1em;
                 overflow:hidden;
-                color: #434b4f;
+                color: #B8AA8E;
 
             }
 
@@ -172,7 +173,6 @@
             }
 
             .square-content:hover, .square-content:focus {
-                color: #999;
                 font-size:1.15rem;
                 transition: all .5s;
                 -webkit-transition: all .5s;
@@ -342,6 +342,10 @@
                 text-decoration: none;
                 cursor: pointer;
             }
+            .rc-anchor-light {
+                background: none;
+                color: #000;
+            }
         </style>
     </head>
     <body>
@@ -364,7 +368,7 @@
                             </ul>
                         </div>
                     @else
-                        <img src="images/copacetic.co-face-120.png" />
+                        <img src="images/copacetic-face-buff.png" />
                     @endif
                 </div>
                 <div class="offerings">
