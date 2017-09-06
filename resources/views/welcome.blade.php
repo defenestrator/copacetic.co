@@ -88,7 +88,7 @@
             .form-group { padding-top:.4em; }
 
             .email-capture {
-                background-color: #131718;
+                background-color: #131319;
                 padding : 1rem;
                 clear:both;
             }
