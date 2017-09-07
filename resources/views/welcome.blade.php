@@ -104,6 +104,7 @@
                 border-radius: 0.5em;
                 line-height: 1.5rem;
                 padding:.5em;
+                font-size: 16px;
             }
 
             .success, .errors {
