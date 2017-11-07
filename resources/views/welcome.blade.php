@@ -369,13 +369,13 @@
                     @if ($errors->count() >= 1)
                         <div class="errors">
                             <ul>
-                                <li class="message-list-item">Scroll down&hellip;something is borked.</li>
+                                <li style="font-weight:600; color: black;" class="message-list-item">Scroll down&hellip;something is borked.</li>
                             </ul>
                         </div>
                     @elseif (session('success'))
                         <div class="success">
                             <ul>
-                                <li class="message-list-item">
+                                <li style="font-weight:600; color: black;" class="message-list-item">
                                     {{ session('success') }}
                                 </li>
                             </ul>
