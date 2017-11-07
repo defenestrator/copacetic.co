@@ -11,7 +11,7 @@
 |
 */
 
-Route::view('welcome', welcome)->name('welcome');
+Route::view('welcome', 'welcome')->name('welcome');
 
 // Enable for authentication system
 //Auth::routes();
