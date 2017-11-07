@@ -250,20 +250,20 @@
             /*}*/
 
             .make {
-                background-image: url('images/make.jpg');
+                background-image: url('https://hobo.nyc3.digitaloceanspaces.com/copacetic/images/make.jpg');
             }
             .deliver {
-                background-image: url('images/deliver.jpg');
+                background-image: url('https://hobo.nyc3.digitaloceanspaces.com/copacetic/images/deliver.jpg');
             }
             .help {
-                background-image: url('images/help.jpg');
+                background-image: url('https://hobo.nyc3.digitaloceanspaces.com/copacetic/images/help.jpg');
 
             }
             .learn {
-                background-image: url('images/learn.jpg');
+                background-image: url('https://hobo.nyc3.digitaloceanspaces.com/copacetic/images/learn.jpg');
             }
             .change {
-                background-image: url('images/change.jpg');
+                background-image: url('https://hobo.nyc3.digitaloceanspaces.com/copacetic/images/change.jpg');
             }
 
             .offerings {
@@ -281,7 +281,7 @@
                 width: 100%;
                 height: 100%;
                 overflow: auto;
-                background:rgba(3,7,17, 0.95);
+                background:rgba(4,4,4, 0.95);
             }
 
             /* Modal Content */
@@ -298,27 +298,27 @@
                 background-size:cover;
             }
             #makeModal .modal-content {
-                background-image: url('images/make.jpg');
+                background-image: url('https://hobo.nyc3.digitaloceanspaces.com/copacetic/images/make.jpg');
                 background-position:top left;
             }
             #deliverModal .modal-content {
                 background-position:center center;
-                background-image: url('images/deliver.jpg');
+                background-image: url('https://hobo.nyc3.digitaloceanspaces.com/copacetic/images/deliver.jpg');
             }
             #helpModal .modal-content  {
-                background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/help.jpg');
+                background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://hobo.nyc3.digitaloceanspaces.com/copacetic/images/help.jpg');
                 background-position:bottom center;
                 background-repeat:no-repeat;
                 background-size:cover;
             }
             #learnModal .modal-content {
-                background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/learn.jpg');
+                background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://hobo.nyc3.digitaloceanspaces.com/copacetic/images/learn.jpg');
                 background-position:top center;
                 background-repeat:no-repeat;
                 background-size:cover;
             }
             #changeModal .modal-content {
-                background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/change.jpg');
+                background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://hobo.nyc3.digitaloceanspaces.com/copacetic/images/change.jpg');
                 background-position:center center;
                 background-repeat:no-repeat;
                 background-size:cover;
@@ -597,10 +597,10 @@
         link.href='https://fonts.googleapis.com/css?family=Lobster|Raleway:300,600';
         link.rel='stylesheet';
         document.getElementsByTagName('head')[0].appendChild(link);
+
+        // Start functional script
         var offerings = ["make", "deliver", "help", "learn", "change"];
 
-
-        // toggle display:block || display:none
         var toggleVisibility = function (targetName) {
             var target = document.getElementById(targetName);
             target.style.display = target.style.display == "block" ? "none" : "block";
@@ -612,9 +612,11 @@
                 var listener = document.getElementById(offering).getAttribute("id")
                 var modal = listener + "Modal";
                 var close = listener + "Close";
+
                 document.getElementById(listener).addEventListener("click", function () {
                         toggleVisibility(modal);
                 });
+
                 document.getElementById(modal).addEventListener("click", function () {
                     if (document.getElementById(event.target.id) == close) {
                         return toggleVisibility(modal);
