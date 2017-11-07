@@ -11,10 +11,9 @@
 |
 */
 
-Route::view('welcome', 'welcome')->name('welcome');
+Route::get('/', 'Controller@index')->name('welcome');
 
 // Enable for authentication system
 //Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/contact-form', "ContactFormController@create")->name('contact-form');
