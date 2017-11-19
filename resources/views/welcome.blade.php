@@ -258,20 +258,20 @@
             /*}*/
 
             .make {
-                background-image: url('https://hobo.nyc3.digitaloceanspaces.com/copacetic/images/make.jpg');
+                background-image: url('/images/make.jpg');
             }
             .deliver {
-                background-image: url('https://hobo.nyc3.digitaloceanspaces.com/copacetic/images/deliver.jpg');
+                background-image: url('/images/deliver.jpg');
             }
             .help {
-                background-image: url('https://hobo.nyc3.digitaloceanspaces.com/copacetic/images/help.jpg');
+                background-image: url('/images/help.jpg');
 
             }
             .learn {
-                background-image: url('https://hobo.nyc3.digitaloceanspaces.com/copacetic/images/learn.jpg');
+                background-image: url('/images/learn.jpg');
             }
             .change {
-                background-image: url('https://hobo.nyc3.digitaloceanspaces.com/copacetic/images/change.jpg');
+                background-image: url('/images/change.jpg');
             }
 
             .offerings {
@@ -306,27 +306,27 @@
                 background-size:cover;
             }
             #makeModal .modal-content {
-                background-image: url('https://hobo.nyc3.digitaloceanspaces.com/copacetic/images/make.jpg');
+                background-image: url('/images/make.jpg');
                 background-position:top left;
             }
             #deliverModal .modal-content {
                 background-position:center center;
-                background-image: url('https://hobo.nyc3.digitaloceanspaces.com/copacetic/images/deliver.jpg');
+                background-image: url('/images/deliver.jpg');
             }
             #helpModal .modal-content  {
-                background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://hobo.nyc3.digitaloceanspaces.com/copacetic/images/help.jpg');
+                background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/images/help.jpg');
                 background-position:bottom center;
                 background-repeat:no-repeat;
                 background-size:cover;
             }
             #learnModal .modal-content {
-                background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://hobo.nyc3.digitaloceanspaces.com/copacetic/images/learn.jpg');
+                background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/learn.jpg');
                 background-position:top center;
                 background-repeat:no-repeat;
                 background-size:cover;
             }
             #changeModal .modal-content {
-                background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://hobo.nyc3.digitaloceanspaces.com/copacetic/images/change.jpg');
+                background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/change.jpg');
                 background-position:center center;
                 background-repeat:no-repeat;
                 background-size:cover;
